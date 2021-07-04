@@ -1,0 +1,12 @@
+{
+  "name": "agiothyella",
+  "version": "1.0.0",
+  "description": "Agiothyella Design Studio main page",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "creative"
+  ],
+  "author": "agiothyella",
+  "license": "ISC"
+}
