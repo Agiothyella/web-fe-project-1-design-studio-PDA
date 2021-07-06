@@ -4,32 +4,95 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Stylesheet -->
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ---------- -->
     <title>Agiothyella Design Studio</title>
   </head>
   <body class="container">
     <header class="header">
-      <div class="image-slider">
-        <div class="text-slider">Text slider</div>
+      <!-- Image Slider -->
+      <div class="slider__container slider__container--img">
+        <div class="slider__img">
+          <img src="img/hero-1.jpg" />
+        </div>
+        <div class="slider__img">
+          <img src="img/hero-2.jpg" />
+        </div>
+        <div class="slider__img">
+          <img src="img/hero-3.jpg" />
+        </div>
+        <div class="slider__img">
+          <img src="img/hero-4.jpg" />
+        </div>
       </div>
+      <!-- ---------- -->
 
-      <div class="header__title">
-        <h1 class="header-1 header-1--title">Agiothyella</h1>
-        <h2 class="header-2 header-2--title">Design Studio</h2>
+      <!-- Slider Button -->
+      <button class="slider__btn slider__btn--left" onclick="slid(-1)">
+        &#10094;
+      </button>
+      <button class="slider__btn slider__btn--right" onclick="slid(1)">
+        &#10095;
+      </button>
+      <!-- ------------- -->
+
+      <!-- Slider Dot -->
+      <div class="slider__dots u-unselectable">
+        <span class="slider__dot"></span>
+        <span class="slider__dot"></span>
+        <span class="slider__dot"></span>
+        <span class="slider__dot"></span>
       </div>
-      <div class="header__nav">
-        <ul class="header__list">
-          <li class="header__item">
-            <a href="#about" class="header__link">About</a>
-          </li>
-          <li class="header__item">
-            <a href="#art" class="header__link">Concept Art</a>
-          </li>
-          <li class="header__item">
-            <a href="#contact" class="header__link">Contact</a>
-          </li>
-        </ul>
+      <!-- ---------- -->
+
+      <div class="slider__highlight"></div>
+
+      <!-- Main Text -->
+      <div class="header__text">
+        <div class="header__title u-unselectable">
+          <h1 class="t-header-1 t-header-1--title">Agiothyella</h1>
+          <h2 class="t-header-2 t-header-2--title">Design Studio</h2>
+        </div>
+
+        <div class="header__nav">
+          <div class="slider__container slider__container--text">
+            <div class="slider__text">Explore the Ideas</div>
+            <div class="slider__text">Imagine the Impossible</div>
+            <div class="slider__text">Search the Unknown</div>
+            <div class="slider__text">Discover the Extraordinary</div>
+          </div>
+
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#about" class="header__link">About</a>
+            </li>
+            <li class="header__item">
+              <a href="#art" class="header__link">Concept Art</a>
+            </li>
+            <li class="header__item">
+              <a href="#contact" class="header__link">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
+      <!-- ---------- -->
     </header>
+
     <nav class="nav">
       <div class="nav__title">Agiothyella Design Studio</div>
       <ul class="nav__list">
@@ -43,30 +106,51 @@
           <a href="#contact" class="nav__link">Contact</a>
         </li>
       </ul>
+
+      <div class="nav__animation nav__animation--left">&nbsp;</div>
+      <div class="nav__animation nav__animation--right">&nbsp;</div>
     </nav>
+
     <section class="about">
-      <div class="about__container">
-        <div class="about__title">About Us</div>
-        <div class="about__content">
-          <div class="about__design"></div>
-          <div class="about__description">
-            <div class="about__text"></div>
-            <div class="about__image"></div>
-          </div>
+      <div class="about__title u-center-text u-margin-bottom-medium">
+        <h3 class="t-header-3">About Us</h3>
+      </div>
+      <div class="about__content">
+        <ul class="about__designs">
+          <li class="about__design">Environment Design</li>
+          <li class="about__design">Character Design</li>
+          <li class="about__design">Creature Design</li>
+          <li class="about__design">Creature Design</li>
+          <li class="about__design">Asset Design</li>
+        </ul>
+        <div class="about__description">
+          <div class="about__text">asddfs</div>
+          <div class="about__image">dfgdgh</div>
         </div>
       </div>
     </section>
+
     <section class="art">
       <div class="art__title">
-        <h3 class="header-3">Concept Art</h3>
+        <h3 class="t-header-3">Concept Art</h3>
       </div>
-      <div class="art__content"></div>
+      <div class="c-gallery"></div>
     </section>
-    <section class="contact"></section>
+
+    <section class="contact">
+      <h3 class="t-header-3">Contact Us</h3>
+    </section>
+
     <footer class="footer">
       <div class="footer__nav"></div>
       <div class="footer__social"></div>
       <div class="copyright"></div>
     </footer>
+
+    <!-- Script -->
+
+    <script src="script/script.js"></script>
+
+    <!-- ------ -->
   </body>
 </html>

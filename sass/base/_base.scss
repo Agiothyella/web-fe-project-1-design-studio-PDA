@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1 rem = 10px
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  // Scrollbar ---
+  overflow-y: scroll;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /*Firefox*/
+
+  /*Firefox*/
+  scrollbar-width: thin;
+  scrollbar-color: $color-tertiary $color-primary;
+
+  /* Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: 0.55vw;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $color-primary;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-tertiary;
+  }
+  // --- Scrollbar
+}
+
+body {
+  // overflow-x: hidden;
+  background-color: $color-primary;
+  color: $color-font-dark;
+}
+
+::selection {
+  background-color: $color-quartenery;
+  color: $color-primary;
+}

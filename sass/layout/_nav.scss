@@ -1,0 +1,22 @@
+.nav {
+  opacity: 0;
+  visibility: hidden;
+
+  &__animation {
+    width: 50%;
+    border-bottom: 2px solid $color-secondary;
+    transition: transform 0.5s ease-out;
+
+    &--left {
+      position: absolute;
+      top: 0;
+      left: -100%;
+    }
+
+    &--right {
+      position: absolute;
+      top: 0;
+      right: -100%;
+    }
+  }
+}

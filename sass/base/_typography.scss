@@ -1,0 +1,42 @@
+.t-header-1 {
+  margin-bottom: 0.2rem;
+  margin-right: -0.25rem;
+  padding: 0 5rem;
+  color: $color-highlight;
+  font-family: "Barlow Semi Condensed";
+  letter-spacing: 0.5rem;
+  font-size: 7.5rem;
+  font-weight: bolder;
+  text-shadow: 0 0 1rem $color-primary, 0.2rem 0.2rem 2rem $color-primary;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 98%;
+    margin-top: -0.2rem;
+    background-color: $color-quartenery;
+    box-shadow: 0 0 1rem $color-primary;
+  }
+}
+
+.t-header-2 {
+  color: $color-highlight;
+  margin-right: -0.75rem;
+  font-family: "Barlow Semi Condensed";
+  font-size: 3rem;
+  letter-spacing: 1.5rem;
+  font-weight: 400;
+  text-shadow: 0 0 1rem $color-primary, 0.2rem 0.2rem 2rem $color-primary;
+}
+
+.t-header-3 {
+  font-family: "Barlow Semi Condensed";
+  font-size: 2.6rem;
+  text-transform: uppercase;
+}
+
+.t-header-4 {
+  font-family: "Barlow Semi Condensed";
+  font-size: 2rem;
+}

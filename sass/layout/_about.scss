@@ -1,0 +1,32 @@
+.about {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+  }
+
+  &__designs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  &__design {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    flex: 1;
+    flex-direction: column;
+  }
+
+  &__text {
+  }
+
+  &__image {
+  }
+}

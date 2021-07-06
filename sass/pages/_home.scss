@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  grid-template-rows: 100vh;
+}
+
+.header {
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.about {
+  margin: 8rem 8rem;
+  padding: 3rem 4rem;
+  box-shadow: 0 1rem 4rem rgba($color-dark-1, 0.2);
+  border: 2px solid $color-secondary-dark;
+  background-color: $color-secondary;
+  color: $color-font-light;
+}
