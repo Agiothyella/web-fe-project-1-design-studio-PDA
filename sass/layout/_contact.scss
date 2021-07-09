@@ -1,0 +1,147 @@
+.contact {
+  &__title {
+    display: inline-block;
+    width: 15%;
+    margin: 0 auto;
+
+    &::after {
+      width: 100%;
+      height: 2px;
+      margin-top: 1rem;
+
+      @include pseudoLine;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    row-gap: 4.5rem;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  &__business {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  &__social {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+    padding: 0 3rem;
+    border-left: 2px solid $color-quartenery;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 2rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: $color-secondary;
+    transition: fill 0.2s;
+  }
+
+  &__profile {
+    order: 1;
+    padding: 0.4rem 1rem;
+    border: 1px solid $color-quartenery;
+    border-radius: 10rem;
+    opacity: 0;
+    visibility: hidden;
+    color: $color-quartenery;
+    font-size: 1.4rem;
+    transition: all 0.2s;
+  }
+
+  &__ilink {
+    order: 3;
+  }
+
+  &__name {
+    order: 2;
+
+    &:link,
+    &:visited {
+      display: inline-block;
+      color: $color-font-dark;
+      font-size: 1.4rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-secondary-dark;
+    }
+  }
+
+  &__name:hover ~ &__profile,
+  &__ilink:hover ~ &__profile {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__name:hover ~ &__ilink &__icon,
+  &__ilink:hover &__icon {
+    fill: $color-quartenery;
+
+    &--artstation {
+      fill: #13aff0;
+    }
+
+    &--instagram {
+      fill: #e4405f;
+    }
+
+    &--twitter {
+      fill: #1da1f2;
+    }
+
+    &--facebook {
+      fill: #1877f2;
+    }
+
+    &--youtube {
+      fill: #f00;
+    }
+
+    &--twitch {
+      fill: #6441a4;
+    }
+
+    &--linkedin {
+      fill: #0077b5;
+    }
+  }
+
+  &__more {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 10rem;
+    margin: 0 5rem;
+    row-gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+  }
+
+  &__more-text {
+    display: inline-block;
+    padding: 0 1.5rem 1rem 1.5rem;
+    border-bottom: 1px solid $color-quartenery;
+    color: $color-highlight;
+    font-size: 1.5rem;
+  }
+}

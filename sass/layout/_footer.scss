@@ -1,0 +1,30 @@
+.footer {
+  &__nav {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      margin: 0 1.5rem;
+      color: $color-font-light;
+      font-size: 1.4rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-quartenery;
+    }
+  }
+}
+
+.copyright {
+  font-size: 1.4rem;
+}

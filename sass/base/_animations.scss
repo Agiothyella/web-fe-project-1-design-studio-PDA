@@ -1,1 +1,14 @@
+.slide-fade {
+  animation-name: slide-fade;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in;
+}
 
+@keyframes slide-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

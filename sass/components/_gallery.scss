@@ -1,0 +1,11 @@
+.c-gallery {
+  display: grid;
+  width: 100%;
+
+  &__flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+}

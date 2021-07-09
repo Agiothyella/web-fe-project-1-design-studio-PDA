@@ -5,6 +5,12 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin pseudoLine {
+  content: "";
+  display: block;
+  background-color: $color-quartenery;
+}
+
 // Responsive ---
 @mixin resSmall {
   @media only screen and (max-width: 37.5em) {

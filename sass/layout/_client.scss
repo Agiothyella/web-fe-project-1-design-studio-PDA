@@ -1,0 +1,63 @@
+.client {
+  h4 {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 3rem;
+    align-items: center;
+    width: 100%;
+
+    &::before {
+      height: 2px;
+      width: 100%;
+
+      @include pseudoLine;
+    }
+
+    &::after {
+      height: 2px;
+      width: 100%;
+
+      @include pseudoLine;
+    }
+  }
+
+  &__companies {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: "c1 c2 c3 c4 c5 c6 c7 c8";
+    justify-content: space-around;
+    justify-items: center;
+    align-content: space-around;
+    align-items: center;
+    gap: 2%;
+    width: 100%;
+  }
+
+  &__company {
+    max-height: 2.5rem;
+    max-width: 100%;
+
+    &--bbc {
+      grid-area: c6;
+    }
+
+    &--bi {
+      grid-area: c4;
+    }
+
+    &--forbes {
+      grid-area: c5;
+    }
+
+    &--techcrunch {
+      grid-area: c3;
+    }
+  }
+
+  &__messages {
+    margin-top: 5rem;
+  }
+
+  &__message {
+  }
+}

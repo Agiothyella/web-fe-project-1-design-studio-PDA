@@ -10,7 +10,6 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; //1 rem = 10px
   scroll-behavior: smooth;
-  overflow-x: hidden;
 
   // Scrollbar ---
   overflow-y: scroll;
@@ -41,6 +40,10 @@ body {
   // overflow-x: hidden;
   background-color: $color-primary;
   color: $color-font-dark;
+}
+
+img {
+  font-size: 1rem;
 }
 
 ::selection {

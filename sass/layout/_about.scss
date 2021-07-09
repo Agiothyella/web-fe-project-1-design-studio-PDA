@@ -1,32 +1,52 @@
 .about {
+  &__title {
+    display: inline-block;
+    width: 12%;
+
+    &::after {
+      width: 100%;
+      height: 2px;
+      margin-top: 1rem;
+
+      @include pseudoLine;
+    }
+  }
   &__content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 10rem;
+    font-family: "Montserrat", sans-serif;
   }
 
-  &__designs {
+  &__texts {
+    flex: 1 1 60%;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    list-style: none;
-  }
-
-  &__design {
-    font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-
-  &__description {
-    flex: 1;
-    flex-direction: column;
+    gap: 4rem;
+    text-align: justify;
+    line-height: 3rem;
   }
 
   &__text {
+    font-size: 1.8rem;
   }
 
-  &__image {
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__end {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  &__picture {
+    flex: 0 0 25%;
+    width: 100%;
+    box-shadow: 0 0 0.5rem $color-quartenery;
   }
 }

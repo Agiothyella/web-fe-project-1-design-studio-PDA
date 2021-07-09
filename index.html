@@ -21,7 +21,7 @@
     />
 
     <!-- ---------- -->
-    <title>Agiothyella Design Studio</title>
+    <title>Agiothyella Design Studios</title>
   </head>
   <body class="container">
     <header class="header">
@@ -43,22 +43,13 @@
       <!-- ---------- -->
 
       <!-- Slider Button -->
-      <button class="slider__btn slider__btn--left" onclick="slid(-1)">
+      <button class="slider__btn slider__btn--left" onclick="slideHead(-1)">
         &#10094;
       </button>
-      <button class="slider__btn slider__btn--right" onclick="slid(1)">
+      <button class="slider__btn slider__btn--right" onclick="slideHead(1)">
         &#10095;
       </button>
       <!-- ------------- -->
-
-      <!-- Slider Dot -->
-      <div class="slider__dots u-unselectable">
-        <span class="slider__dot"></span>
-        <span class="slider__dot"></span>
-        <span class="slider__dot"></span>
-        <span class="slider__dot"></span>
-      </div>
-      <!-- ---------- -->
 
       <div class="slider__highlight"></div>
 
@@ -66,7 +57,7 @@
       <div class="header__text">
         <div class="header__title u-unselectable">
           <h1 class="t-header-1 t-header-1--title">Agiothyella</h1>
-          <h2 class="t-header-2 t-header-2--title">Design Studio</h2>
+          <h2 class="t-header-2 t-header-2--title">Design Studios</h2>
         </div>
 
         <div class="header__nav">
@@ -82,7 +73,10 @@
               <a href="#about" class="header__link">About</a>
             </li>
             <li class="header__item">
-              <a href="#art" class="header__link">Concept Art</a>
+              <a href="#services" class="header__link">Services</a>
+            </li>
+            <li class="header__item">
+              <a href="#art" class="header__link">Portofolio</a>
             </li>
             <li class="header__item">
               <a href="#contact" class="header__link">Contact</a>
@@ -94,15 +88,18 @@
     </header>
 
     <nav class="nav">
-      <div class="nav__title">Agiothyella Design Studio</div>
+      <div class="nav__title">Agiothyella Design Studios</div>
       <ul class="nav__list">
-        <li class="nav__items">
+        <li class="nav__item">
           <a href="#about" class="nav__link">About</a>
         </li>
-        <li class="nav__items">
-          <a href="#art" class="nav__link">Concept Art</a>
+        <li class="nav__item">
+          <a href="#services" class="header__link">Services</a>
         </li>
-        <li class="nav__items">
+        <li class="nav__item">
+          <a href="#art" class="header__link">Portofolio</a>
+        </li>
+        <li class="nav__item">
           <a href="#contact" class="nav__link">Contact</a>
         </li>
       </ul>
@@ -112,39 +109,430 @@
     </nav>
 
     <section class="about">
-      <div class="about__title u-center-text u-margin-bottom-medium">
+      <div class="about__title u-margin-bottom-medium">
         <h3 class="t-header-3">About Us</h3>
       </div>
       <div class="about__content">
-        <ul class="about__designs">
-          <li class="about__design">Environment Design</li>
-          <li class="about__design">Character Design</li>
-          <li class="about__design">Creature Design</li>
-          <li class="about__design">Creature Design</li>
-          <li class="about__design">Asset Design</li>
+        <div class="about__texts">
+          <p class="about__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum libero
+            doloribus aperiam voluptatem id adipisci assumenda, dolorem
+            architecto at porro! Corporis reprehenderit corrupti magni
+            blanditiis, aperiam laboriosam explicabo repellat doloremque! Lorem
+            ipsum dolor sit amet consectetur, adipisicing elit. Perferendis, rem
+            beatae saepe modi nobis commodi, provident dolores eius molestias,
+            expedita amet totam incidunt quae optio officiis doloremque cumque
+            sit? Labore.
+          </p>
+          <div class="about__bottom">
+            <p class="about__end">Agiothyella Design Studios</p>
+            <a href="#" class="btn-text">Learn more &rarr;</a>
+          </div>
+        </div>
+        <img
+          src="img/office.jpg"
+          alt="Agiothyella Design Studios"
+          class="about__picture"
+        />
+      </div>
+    </section>
+
+    <section class="service">
+      <div class="service__title u-center-text u-margin-bottom-medium">
+        <h3 class="t-header-3">What we do</h3>
+      </div>
+      <div class="service__content">
+        <ul class="service__designs u-unselectable">
+          <li class="service__design" onclick="slideService(1)">
+            Environment Design
+          </li>
+          <li class="service__design" onclick="slideService(2)">
+            Character Design
+          </li>
+          <li class="service__design" onclick="slideService(3)">
+            Creature Design
+          </li>
+          <li class="service__design" onclick="slideService(4)">
+            Vehicle Design
+          </li>
+          <li class="service__design" onclick="slideService(5)">
+            Props Design
+          </li>
         </ul>
-        <div class="about__description">
-          <div class="about__text">asddfs</div>
-          <div class="about__image">dfgdgh</div>
+        <div class="service__texts">
+          <p class="service__text slide-fade">
+            Environemt Design Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Sequi dignissimos ipsam assumenda, nihil provident voluptas,
+            quos nisi molestias laborum, doloremque modi ratione culpa eaque
+            nemo perferendis natus ad accusamus omnis.
+          </p>
+          <p class="service__text slide-fade">
+            Character Design Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Voluptatibus consectetur deleniti sint quidem quas magnam
+            culpa autem adipisci! Praesentium, quo id ipsa repellendus
+            aspernatur minus nostrum velit facilis error neque.
+          </p>
+          <p class="service__text slide-fade">
+            Creature Design Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Eum ducimus esse odit sapiente aliquam! Repellat cumque
+            aliquid nam earum nulla rerum expedita alias doloremque. Commodi
+            vero quasi labore sequi repellat?
+          </p>
+          <p class="service__text slide-fade">
+            Vehicle Design Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Eum inventore, recusandae reiciendis tenetur nam ut corrupti
+            at. Nihil vero mollitia, quasi, aspernatur accusantium assumenda
+            ratione, ipsa numquam excepturi porro sunt.
+          </p>
+          <p class="service__text slide-fade">
+            Props Design Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Quae optio corrupti culpa enim, eaque adipisci ut sint
+            repellendus tempore tenetur similique excepturi molestias at modi
+            veniam. Molestiae rem iure culpa!
+          </p>
+        </div>
+        <div class="service__composition">
+          <div class="service__images service__images--environment slide-fade">
+            <img
+              src="img/work-env-1.jpg"
+              alt="Environment concept art"
+              class="service__image service__image--env-1"
+            />
+            <img
+              src="img/work-env-2.jpg"
+              alt="Environment concept art"
+              class="service__image service__image--env-2"
+            />
+            <img
+              src="img/work-env-3.jpg"
+              alt="Environment concept art"
+              class="service__image service__image--env-3"
+            />
+          </div>
+          <div class="service__images service__images--character slide-fade">
+            <img
+              src="img/work-char-1.jpg"
+              alt="Character concept art"
+              class="service__image service__image--char-1"
+            />
+            <img
+              src="img/work-char-2.jpg"
+              alt="Character concept art"
+              class="service__image service__image--char-2"
+            />
+            <img
+              src="img/work-char-3.jpg"
+              alt="Character concept art"
+              class="service__image service__image--char-3"
+            />
+          </div>
+          <div class="service__images service__images--creature slide-fade">
+            <img
+              src="img/work-cre-1.jpg"
+              alt="Creature concept art"
+              class="service__image service__image--cre-1"
+            />
+            <img
+              src="img/work-cre-2.jpg"
+              alt="Creature concept art"
+              class="service__image service__image--cre-2"
+            />
+            <img
+              src="img/work-cre-3.jpg"
+              alt="Creature concept art"
+              class="service__image service__image--cre-3"
+            />
+          </div>
+          <div class="service__images service__images--vehicle slide-fade">
+            <img
+              src="img/work-vic-1.jpg"
+              alt="Vehicle concept art"
+              class="service__image service__image--vic-1"
+            />
+            <img
+              src="img/work-vic-2.jpg"
+              alt="Vehicle concept art"
+              class="service__image service__image--vic-2"
+            />
+            <img
+              src="img/work-vic-3.jpg"
+              alt="Vehicle concept art"
+              class="service__image service__image--vic-3"
+            />
+          </div>
+          <div class="service__images service__images--props slide-fade">
+            <img
+              src="img/work-props-1.jpg"
+              alt="Props concept art"
+              class="service__image service__image--props-1"
+            />
+            <img
+              src="img/work-props-2.jpg"
+              alt="Props concept art"
+              class="service__image service__image--props-2"
+            />
+            <img
+              src="img/work-props-3.jpg"
+              alt="Props concept art"
+              class="service__image service__image--props-3"
+            />
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="art">
-      <div class="art__title">
-        <h3 class="t-header-3">Concept Art</h3>
+    <section class="client">
+      <h4 class="t-header-4">Our clients</h4>
+      <div class="client__companies">
+        <img
+          src="img/company-bbc.png"
+          alt="BBC"
+          class="client__company client__company--bbc"
+        />
+        <img
+          src="img/company-bi.png"
+          alt="Business Insider"
+          class="client__company client__company--bi"
+        />
+        <img
+          src="img/company-forbes.png"
+          alt="Forbes"
+          class="client__company client__company--forbes"
+        />
+        <img
+          src="img/company-techcrunch.png"
+          alt="Techcrunch"
+          class="client__company client__company--techcrunch"
+        />
+        <!-- <img src="" alt="Test" class="client__company" />
+        <img src="" alt="Test" class="client__company" />
+        <img src="" alt="Test" class="client__company" />
+        <img src="" alt="Test" class="client__company" /> -->
       </div>
-      <div class="c-gallery"></div>
+
+      <div class="client__messages">
+        <div class="client__message">Client Messages/Review</div>
+      </div>
+    </section>
+
+    <section class="art">
+      <div class="art__title u-center-text u-margin-bottom-small">
+        <h3 class="t-header-3">Our Works</h3>
+      </div>
+      <div class="art__search"></div>
+      <div class="art__showcase c-gallery">
+        <div class="art__content c-gallery__flex-column">
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+        </div>
+        <div class="art__content c-gallery__flex-column">
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+        </div>
+        <div class="art__content c-gallery__flex-column">
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+          <figure>
+            <img src="" alt="" />
+            <figcaption></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="art__nav">Navigation</div>
     </section>
 
     <section class="contact">
-      <h3 class="t-header-3">Contact Us</h3>
+      <div class="contact__title u-margin-bottom-medium">
+        <h3 class="t-header-3">Contact Us</h3>
+      </div>
+      <div class="contact__content">
+        <div class="contact__business">
+          <div class="contact__items">
+            <a href="#" class="contact__name"
+              >Cibeunying Landeuh 71/144F, Bandung 40123, Indonesia</a
+            >
+            <a href="#" class="contact__ilink">
+              <svg class="contact__icon">
+                <use
+                  xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-location"
+                ></use></svg
+            ></a>
+          </div>
+          <div class="contact__items">
+            <a href="#" class="contact__name">+62 821-3092-9268</a>
+            <a href="#" class="contact__ilink">
+              <svg class="contact__icon">
+                <use
+                  xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-phone"
+                ></use></svg
+            ></a>
+          </div>
+          <div class="contact__items">
+            <a href="#" class="contact__name">agiothyella@gmail.com</a>
+            <a href="#" class="contact__ilink">
+              <svg class="contact__icon">
+                <use
+                  xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-envelop"
+                ></use></svg
+            ></a>
+          </div>
+        </div>
+        <div class="contact__social">
+          <div class="contact__items">
+            <a href="#" class="contact__name">LinkedIn</a>
+            <a href="#" class="contact__ilink">
+              <svg class="contact__icon contact__icon--linkedin">
+                <use
+                  xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-linkedin"
+                ></use></svg
+            ></a>
+            <div class="contact__profile">Agiothyella</div>
+          </div>
+          <div class="contact__items">
+            <a href="#" class="contact__name">ArtStation</a>
+            <a href="#" class="contact__ilink">
+              <svg class="contact__icon contact__icon--artstation">
+                <use
+                  xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-artstation"
+                ></use></svg
+            ></a>
+            <div class="contact__profile">Agiothyella</div>
+          </div>
+          <div class="contact__items">
+            <a href="#" class="contact__name">Instagram</a>
+            <a href="#" class="contact__ilink">
+              <svg class="contact__icon contact__icon--instagram">
+                <use
+                  xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-instagram"
+                ></use></svg
+            ></a>
+            <div class="contact__profile">Agiothyella</div>
+          </div>
+          <div class="contact__items">
+            <a href="#" class="contact__name">Twitter</a>
+            <a href="#" class="contact__ilink">
+              <svg class="contact__icon contact__icon--twitter">
+                <use
+                  xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-twitter"
+                ></use></svg
+            ></a>
+            <div class="contact__profile">@agiothyella</div>
+          </div>
+          <div class="contact__items">
+            <a href="#" class="contact__name">Facebook</a>
+            <a href="#" class="contact__ilink">
+              <svg class="contact__icon contact__icon--facebook">
+                <use
+                  xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-facebook"
+                ></use></svg
+            ></a>
+            <div class="contact__profile">Agiothyella</div>
+          </div>
+          <div class="contact__items">
+            <a href="#" class="contact__name">Youtube</a>
+            <a href="#" class="contact__ilink">
+              <svg class="contact__icon contact__icon--youtube">
+                <use
+                  xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-youtube"
+                ></use></svg
+            ></a>
+            <div class="contact__profile">Agiothyella</div>
+          </div>
+          <div class="contact__items">
+            <a href="#" class="contact__name">Twitch</a>
+            <a href="#" class="contact__ilink">
+              <svg class="contact__icon contact__icon--twitch">
+                <use
+                  xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-twitch"
+                ></use></svg
+            ></a>
+            <div class="contact__profile">Agiothyella</div>
+          </div>
+        </div>
+        <div class="contact__more">
+          <p class="contact__more-text">
+            Learn more about our company strength
+          </p>
+          <p class="contact__more-text">Join our adventures</p>
+          <a href="#" class="btn btn--deck">Our company deck</a>
+          <a href="#" class="btn btn--career">Career</a>
+        </div>
+      </div>
     </section>
 
     <footer class="footer">
-      <div class="footer__nav"></div>
-      <div class="footer__social"></div>
-      <div class="copyright"></div>
+      <ul class="footer__nav">
+        <li class="footer__item">
+          <a href="" class="footer__link">Company</a>
+        </li>
+        <li class="footer__item">
+          <a href="" class="footer__link">Policy</a>
+        </li>
+        <li class="footer__item">
+          <a href="" class="footer__link">Terms</a>
+        </li>
+        <li class="footer__item">
+          <a href="" class="footer__link">Blog</a>
+        </li>
+      </ul>
+
+      <div class="copyright">
+        Copyright&copy; 2021 Agiothyella Design Studios
+      </div>
     </footer>
 
     <!-- Script -->
