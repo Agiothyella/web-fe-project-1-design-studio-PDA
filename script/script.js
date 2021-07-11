@@ -4,35 +4,36 @@
 const slideImg = document.getElementsByClassName("slider__img");
 const slideTxt = document.getElementsByClassName("slider__text");
 const slideDesign = document.getElementsByClassName("service__design");
-const designText = document.getElementsByClassName("service__text");
-const designImages = document.getElementsByClassName("service__images");
+const slideDesignText = document.getElementsByClassName("service__text");
+const slideDesignImages = document.getElementsByClassName("service__images");
+const slideClientMessage = document.getElementsByClassName("client__message");
+
+const progressService = document.querySelector(".service__progress");
+
+let slideDot = document.getElementsByClassName("slider__dot");
 
 let indexImg = Math.floor(Math.random() * slideImg.length) + 1;
 let indexTxt = Math.floor(Math.random() * slideTxt.length) + 1;
 let indexDesign = Math.floor(Math.random() * slideDesign.length) + 1;
+let indexMessage = Math.floor(Math.random() * slideClientMessage.length) + 1;
 
-let timerHead, timerDesign;
+let indexMessageNext = indexMessage - 1;
+let timerHead, timerDesign, timerMessage;
 // -- Variable
 
+// Main functions ---------
 // Head auto slider ---
 function showSlidesHead() {
-  for (i = 0; i < slideImg.length; i++) {
-    slideImg[i].classList.remove("u-slide-visible");
-    slideTxt[i].classList.remove("u-slide-visible");
-  }
+  removeHead();
+
   indexImg++;
   indexTxt++;
 
-  if (indexImg > slideImg.length) {
-    indexImg = 1;
-  }
+  indexImg = checkNextSlide(indexImg, slideImg);
+  indexTxt = checkNextSlide(indexTxt, slideTxt);
 
-  if (indexTxt > slideTxt.length) {
-    indexTxt = 1;
-  }
+  displayHead();
 
-  slideImg[indexImg - 1].classList.add("u-slide-visible");
-  slideTxt[indexTxt - 1].classList.add("u-slide-visible");
   timerHead = setTimeout(showSlidesHead, 7000);
 }
 
@@ -42,31 +43,15 @@ function showSlidesHead() {
 function slideHead(position) {
   clearTimeout(timerHead);
 
+  removeHead();
+
   indexImg += position;
   indexTxt += position;
 
-  if (indexImg > slideImg.length) {
-    indexImg = 1;
-  } else if (indexImg < 1) {
-    indexImg = slideImg.length;
-  }
+  indexImg = checkSlides(indexImg, slideImg);
+  indexTxt = checkSlides(indexTxt, slideTxt);
 
-  if (indexTxt > slideTxt.length) {
-    indexTxt = 1;
-  } else if (indexTxt < 1) {
-    indexTxt = slideTxt.length;
-  }
-
-  for (i = 0; i < slideImg.length; i++) {
-    slideImg[i].classList.remove("u-slide-visible");
-  }
-
-  for (i = 0; i < slideTxt.length; i++) {
-    slideTxt[i].classList.remove("u-slide-visible");
-  }
-
-  slideImg[indexImg - 1].classList.add("u-slide-visible");
-  slideTxt[indexTxt - 1].classList.add("u-slide-visible");
+  displayHead();
 
   timerHead = setTimeout(showSlidesHead, 7000);
 }
@@ -74,52 +59,175 @@ function slideHead(position) {
 
 // Service auto slider ---
 function showSlidesService() {
-  for (i = 0; i < designText.length; i++) {
-    designText[i].classList.remove("u-slide-display--block");
-    designImages[i].classList.remove("u-slide-display--grid");
-  }
-
-  for (i = 0; i < slideDesign.length; i++) {
-    slideDesign[i].classList.remove("service__design--active");
-  }
+  removeService();
+  removeAnim();
 
   indexDesign++;
 
-  if (indexDesign > designText.length) {
-    indexDesign = 1;
-  }
+  indexDesign = checkNextSlide(indexDesign, slideDesignText);
 
-  designText[indexDesign - 1].classList.add("u-slide-display--block");
-  designImages[indexDesign - 1].classList.add("u-slide-display--grid");
-  slideDesign[indexDesign - 1].classList.add("service__design--active");
+  displayService();
+  setTimeout(function () {
+    addAnim("progress-10s");
+  }, 100);
 
   timerDesign = setTimeout(showSlidesService, 10000);
 }
-// -- Service auto slider
+// --- Service auto slider
 
+//  Service manual slider ---
 function slideService(activeNumber) {
   clearTimeout(timerDesign);
 
+  removeService();
+  removeAnim();
+
   indexDesign = activeNumber;
 
-  for (i = 0; i < designText.length; i++) {
-    designText[i].classList.remove("u-slide-display--block");
-    designImages[i].classList.remove("u-slide-display--grid");
-  }
-
-  for (i = 0; i < slideDesign.length; i++) {
-    slideDesign[i].classList.remove("service__design--active");
-  }
-
-  designText[indexDesign - 1].classList.add("u-slide-display--block");
-  designImages[indexDesign - 1].classList.add("u-slide-display--grid");
-  slideDesign[indexDesign - 1].classList.add("service__design--active");
+  displayService();
+  setTimeout(function () {
+    addAnim("progress-25s");
+  }, 100);
 
   timerDesign = setTimeout(showSlidesService, 25000);
 }
+// --- Service manual slider
+
+// Message auto slider ---
+function showSlidesMessage() {
+  removeMessage();
+
+  indexMessage++;
+  indexMessageNext++;
+
+  indexMessageNext = checkNextSlide(indexMessageNext, slideClientMessage);
+  indexMessage = checkNextSlide(indexMessage, slideClientMessage);
+
+  slideClientMessage[indexMessage - 1].classList.add("client__message--active");
+  slideClientMessage[indexMessageNext - 1].classList.add(
+    "client__message--slided"
+  );
+
+  timerMessage = setTimeout(showSlidesMessage, 20000);
+}
+
+// -- Message auto slider
+
+// Message manual slider ---
+function slideMessage(position) {
+  clearTimeout(timerMessage);
+
+  indexMessage += position;
+  indexMessageNext += position;
+
+  indexMessageNext = checkSlides(indexMessageNext, slideClientMessage);
+  indexMessage = checkSlides(indexMessage, slideClientMessage);
+
+  removeMessage();
+  displayMessage();
+
+  timerMessage = setTimeout(showSlidesMessage, 20000);
+}
+// --- Message manual slider
+// --------- Main functions
+
+// Modules ---------
+// Check next slide ---
+function checkNextSlide(index, slide) {
+  if (index > slide.length) {
+    index = 1;
+  }
+
+  return index;
+}
+// --- Check next slide
+
+// Check slide ---
+function checkSlides(index, slide) {
+  if (index > slide.length) {
+    index = 1;
+  } else if (index < 1) {
+    index = slide.length;
+  }
+
+  return index;
+}
+// --- Check slide
+// Remove head ---
+function removeHead() {
+  for (i = 0; i < slideImg.length; i++) {
+    slideImg[i].classList.remove("u-slide-visible");
+    slideDot[i].classList.remove("slider__dot--active");
+  }
+
+  for (i = 0; i < slideTxt.length; i++) {
+    slideTxt[i].classList.remove("u-slide-visible");
+  }
+}
+// --- Remove head
+
+// Display head ---
+function displayHead() {
+  slideImg[indexImg - 1].classList.add("u-slide-visible");
+  slideTxt[indexTxt - 1].classList.add("u-slide-visible");
+  slideDot[indexImg - 1].classList.add("slider__dot--active");
+}
+// --- Display head
+
+// Display service ---
+function displayService() {
+  slideDesignText[indexDesign - 1].classList.add("u-slide-display--block");
+  slideDesignImages[indexDesign - 1].classList.add("u-slide-display--grid");
+  slideDesign[indexDesign - 1].classList.add("service__design--active");
+}
+// --- Display service
+
+// Remove service ---
+function removeService() {
+  for (i = 0; i < slideDesign.length; i++) {
+    slideDesign[i].classList.remove("service__design--active");
+    slideDesignText[i].classList.remove("u-slide-display--block");
+    slideDesignImages[i].classList.remove("u-slide-display--grid");
+  }
+}
+// --- Remove service
+
+// Remove animation ---
+function removeAnim() {
+  progressService.classList.remove("progress-10s");
+  progressService.classList.remove("progress-25s");
+}
+// --- Remove animation
+
+// Add animation ---
+function addAnim(animation) {
+  progressService.classList.add(animation);
+  progressService.classList.add(animation);
+}
+// --- Add animation
+
+// Remove message ---
+function removeMessage() {
+  for (i = 0; i < slideClientMessage.length; i++) {
+    slideClientMessage[i].classList.remove("client__message--active");
+    slideClientMessage[i].classList.remove("client__message--slided");
+  }
+}
+// --- Remove message
+
+// Display message ---
+function displayMessage() {
+  slideClientMessage[indexMessage - 1].classList.add("client__message--active");
+  slideClientMessage[indexMessageNext - 1].classList.add(
+    "client__message--slided"
+  );
+}
+// --- Display message
+// --------- Modules
 
 showSlidesHead();
 showSlidesService();
+showSlidesMessage();
 
 //
 //

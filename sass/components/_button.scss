@@ -33,8 +33,8 @@
     border-bottom: 1px solid $color-quartenery;
     border-radius: 0.2rem;
     cursor: pointer;
-    background-color: $color-primary;
-    color: $color-font-dark;
+    background-color: transparent;
+    color: inherit;
     font-size: 1.3rem;
     text-decoration: none;
     transition: all 0.2s;
@@ -50,5 +50,25 @@
   &:active {
     box-shadow: 0 0.1rem 0.3rem rgba($color-dark-1, 0.3);
     transform: translateY(0rem);
+  }
+}
+
+.btn-plain {
+  &:link,
+  &:visited {
+    padding: 0.3rem 0.5rem;
+    border-bottom: 1px solid $color-quartenery;
+    border-radius: 0.1rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: inherit;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  &:hover,
+  &:active {
+    color: $color-quartenery;
   }
 }

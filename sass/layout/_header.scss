@@ -92,8 +92,8 @@
     background-color: rgba($color-tertiary, 0.1);
     text-shadow: 0 0 0.2rem $color-secondary;
     cursor: pointer;
-    font-size: 2rem;
     color: $color-quartenery;
+    font-size: 2rem;
     transform: translateY(-50%);
     transition: background-color 0.1s;
     z-index: 2;
@@ -138,6 +138,29 @@
       transform: translateX(-1.5rem);
 
       @include pseudoLine;
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 1rem 0;
+    transform: translateX(-50%);
+  }
+
+  &__dot {
+    display: inline-block;
+    height: 0.8rem;
+    width: 0.8rem;
+    margin: 0 0.4rem;
+    border: 1px solid $color-tertiary;
+    border-radius: 50%;
+    background-color: $color-secondary;
+    transition: background-color 0.8s ease-in-out;
+
+    &--active {
+      background-color: $color-quartenery;
     }
   }
 }

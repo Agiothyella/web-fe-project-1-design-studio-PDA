@@ -19,7 +19,6 @@
     grid-template-columns: max-content minmax(20%, 1fr) 1fr;
     justify-content: space-between;
     align-items: center;
-    font-family: "Montserrat", sans-serif;
   }
 
   &__designs {
@@ -28,7 +27,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 3rem;
-    padding: 0 2rem 0 2rem;
+    padding: 0 2rem;
     list-style: none;
     border-left: 2px solid $color-tertiary-light;
   }
@@ -147,6 +146,7 @@
 
     &--env-3 {
       grid-area: g3;
+      object-position: left;
     }
 
     &--char-1 {
@@ -199,5 +199,20 @@
     &--props-3 {
       grid-area: g3;
     }
+  }
+
+  &__bar {
+    grid-column: 1 / 2;
+    width: 92.5%;
+    background-color: $color-tertiary-dark;
+  }
+
+  &__progress {
+    display: block;
+    height: 2px;
+    width: 100%;
+    opacity: 0;
+    background-color: $color-quartenery;
+    transform-origin: left;
   }
 }

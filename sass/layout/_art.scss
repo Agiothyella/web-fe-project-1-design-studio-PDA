@@ -13,6 +13,13 @@
     }
   }
 
+  &__search {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
   &__showcase {
     grid-template-columns: repeat(3, 1fr);
     gap: 1%;
@@ -22,12 +29,20 @@
 
   &__content {
     gap: 1%;
-    height: 100vh;
+    height: 200vh;
     width: 100%;
   }
 
   &__nav {
-    margin: 2rem 0 3rem 0;
-    font-family: "Montserrat", sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 90%;
+    margin: 2rem 0 2rem 0;
+  }
+
+  &__blog {
+    justify-self: flex-start;
   }
 }

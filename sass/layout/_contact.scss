@@ -18,7 +18,6 @@
     grid-template-columns: 2fr 1fr;
     align-items: center;
     row-gap: 4.5rem;
-    font-family: "Montserrat", sans-serif;
   }
 
   &__business {
@@ -60,6 +59,7 @@
     opacity: 0;
     visibility: hidden;
     color: $color-quartenery;
+    text-shadow: 0 0 0.1rem $color-tertiary-light;
     font-size: 1.4rem;
     transition: all 0.2s;
   }

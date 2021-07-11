@@ -1,0 +1,52 @@
+.c-search-bar {
+  display: flex;
+  align-items: center;
+
+  &__input {
+    width: 30rem;
+    padding: 0.8rem 2rem;
+    margin-right: -3.25rem;
+    background-color: $color-tertiary;
+    border: none;
+    border-radius: 10rem;
+    color: $color-primary;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    transition: all 0.2s;
+
+    &:focus {
+      outline: none;
+      background-color: $color-tertiary-dark;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-primary;
+      font-weight: 100;
+    }
+
+    &::-moz-placeholder {
+      opacity: 1;
+      color: $color-primary;
+      font-weight: 100;
+    }
+  }
+
+  &__button {
+    border: none;
+    fill: $color-primary;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+
+  &__icon {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+}

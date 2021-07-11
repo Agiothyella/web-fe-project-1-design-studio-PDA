@@ -12,28 +12,31 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  font-family: "Montserrat", sans-serif;
 }
 
 .about {
   padding: 8rem 13rem;
   margin-top: 6rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 .service {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   margin-top: 8rem;
   padding: 6rem 10rem 10rem 10rem;
   border: 2px solid $color-tertiary-dark;
   border-bottom: none;
   background-color: $color-tertiary;
   color: $color-font-light;
+  font-family: "Montserrat", sans-serif;
 }
 
 .client {
@@ -43,24 +46,28 @@
   align-items: center;
   row-gap: 4rem;
   column-gap: 5rem;
+
   border: 2px solid $color-tertiary-dark;
   border-top: none;
   background-color: $color-tertiary-light;
   color: $color-font-light;
+  font-family: "Montserrat", sans-serif;
 }
 
 .art {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8rem 0 0 0;
+  padding: 7rem 0 0 0;
   border-bottom: 2px solid $color-secondary-light;
   background-color: $color-secondary;
   color: $color-font-light;
+  font-family: "Montserrat", sans-serif;
 }
 
 .contact {
-  padding: 8rem 13rem;
+  padding: 13rem 13rem 8rem 13rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 .footer {

@@ -24,7 +24,7 @@
   &__companies {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-areas: "c1 c2 c3 c4 c5 c6 c7 c8";
+    grid-template-areas: "c01 c02 c03 c04 c05 c06 c07 c08";
     justify-content: space-around;
     justify-items: center;
     align-content: space-around;
@@ -38,26 +38,102 @@
     max-width: 100%;
 
     &--bbc {
-      grid-area: c6;
+      grid-area: c06;
     }
 
     &--bi {
-      grid-area: c4;
+      grid-area: c04;
     }
 
     &--forbes {
-      grid-area: c5;
+      grid-area: c05;
     }
 
     &--techcrunch {
-      grid-area: c3;
+      grid-area: c03;
+    }
+  }
+
+  &__message-container {
+    display: flex;
+    align-items: center;
+    column-gap: 6rem;
+    width: 100%;
+    height: 13rem;
+    margin: 8rem 8rem 0 8rem;
+  }
+
+  &__message-arrow {
+    padding: 0 1.5rem;
+    margin-top: -2%;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover,
+    &:active {
+      color: $color-quartenery;
     }
   }
 
   &__messages {
-    margin-top: 5rem;
+    flex: 1;
+    align-self: flex-start;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 13rem;
   }
 
   &__message {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 125%;
+    width: inherit;
+    opacity: 0;
+    text-align: center;
+    transition: all 1.5s;
+
+    &--active {
+      opacity: 1;
+      left: 0;
+    }
+
+    &--slided {
+      opacity: 0;
+      left: -125%;
+    }
+  }
+
+  &__quote {
+    font-size: 1.6rem;
+    font-style: italic;
+
+    p {
+      &::before {
+        content: '" ';
+        font-size: 2rem;
+      }
+
+      &::after {
+        content: ' "';
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__name {
+    display: inline-block;
+    margin: 3rem 0 0 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+
+    span {
+      display: block;
+      margin-top: 0.3rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
   }
 }

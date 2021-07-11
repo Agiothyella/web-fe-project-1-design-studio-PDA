@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Stylesheet -->
-
     <link rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400&display=swap"
       rel="stylesheet"
@@ -19,8 +17,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
       rel="stylesheet"
     />
-
     <!-- ---------- -->
+
     <title>Agiothyella Design Studios</title>
   </head>
   <body class="container">
@@ -50,6 +48,15 @@
         &#10095;
       </button>
       <!-- ------------- -->
+
+      <!-- Slider Dot -->
+      <div class="slider__dots u-unselectable">
+        <span class="slider__dot"></span>
+        <span class="slider__dot"></span>
+        <span class="slider__dot"></span>
+        <span class="slider__dot"></span>
+      </div>
+      <!-- ---------- -->
 
       <div class="slider__highlight"></div>
 
@@ -278,6 +285,9 @@
             />
           </div>
         </div>
+        <div class="service__bar">
+          <div class="service__progress"></div>
+        </div>
       </div>
     </section>
 
@@ -304,22 +314,97 @@
           alt="Techcrunch"
           class="client__company client__company--techcrunch"
         />
-        <!-- <img src="" alt="Test" class="client__company" />
-        <img src="" alt="Test" class="client__company" />
-        <img src="" alt="Test" class="client__company" />
-        <img src="" alt="Test" class="client__company" /> -->
       </div>
 
-      <div class="client__messages">
-        <div class="client__message">Client Messages/Review</div>
+      <div class="client__message-container">
+        <div class="client__message-arrow" onclick="slideMessage(-1)">
+          &lsaquo;
+        </div>
+        <div class="client__messages">
+          <div class="client__message">
+            <blockquote class="client__quote">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequuntur tempora, hic exercitationem quasi temporibus quod
+                ut recusandae voluptatibus commodi, doloremque similique cumque
+                itaque voluptatum expedita dolorem eligendi! Minima, numquam?
+                Laborum?
+              </p>
+              <cite class="client__name">
+                Ralof of Riverwood
+                <span>CEO - BBC</span>
+              </cite>
+            </blockquote>
+          </div>
+          <div class="client__message">
+            <blockquote class="client__quote">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A
+                reiciendis, perferendis nisi laboriosam id adipisci quibusdam
+                consectetur repudiandae ad veniam iure optio possimus fuga illo
+                impedit ut autem similique atque?
+              </p>
+              <cite class="client__name">
+                Mario Auditore de Firenze
+                <span>Art Director - Business Insider</span>
+              </cite>
+            </blockquote>
+          </div>
+          <div class="client__message">
+            <blockquote class="client__quote">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptatibus ratione sit obcaecati odit animi, ea eligendi ullam
+                nostrum deserunt molestias error at mollitia provident ex
+                minima, officia vero. Fuga, a?
+              </p>
+              <cite class="client__name">
+                Dimitri Petrenko
+                <span>Art Director - Forbes</span>
+              </cite>
+            </blockquote>
+          </div>
+          <div class="client__message">
+            <blockquote class="client__quote">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Voluptatem explicabo vero totam nam cumque officiis obcaecati
+                tempore quas cum perferendis, atque adipisci voluptas nobis
+                dolorum tenetur animi unde corporis! Illo.
+              </p>
+              <cite class="client__name">
+                Mitsuzuri Ayako
+                <span>CO-Founder - TechCrunch</span>
+              </cite>
+            </blockquote>
+          </div>
+        </div>
+        <div class="client__message-arrow" onclick="slideMessage(1)">
+          &rsaquo;
+        </div>
       </div>
     </section>
 
     <section class="art">
-      <div class="art__title u-center-text u-margin-bottom-small">
+      <div class="art__title u-center-text">
         <h3 class="t-header-3">Our Works</h3>
       </div>
-      <div class="art__search"></div>
+      <div class="art__search">
+        <form action="#" class="c-search-bar">
+          <input
+            type="text"
+            class="c-search-bar__input"
+            placeholder="Search Concept Art"
+          />
+          <button class="c-search-bar__button">
+            <svg class="c-search-bar__icon">
+              <use
+                xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-search"
+              ></use>
+            </svg>
+          </button>
+        </form>
+      </div>
       <div class="art__showcase c-gallery">
         <div class="art__content c-gallery__flex-column">
           <figure>
@@ -392,7 +477,32 @@
           </figure>
         </div>
       </div>
-      <div class="art__nav">Navigation</div>
+      <div class="art__nav">
+        <a href="#" class="btn-plain art__blog">See more on our blog</a>
+        <ul class="pagination">
+          <li class="pagination__arrow">&laquo;</li>
+          <li class="pagination__arrow">&lsaquo;</li>
+          <ul class="pagination__link-container">
+            <li class="pagination__link">3</li>
+            <li class="pagination__link">4</li>
+            <li class="pagination__link pagination__link--active">5</li>
+            <li class="pagination__link">6</li>
+            <li class="pagination__link">7</li>
+          </ul>
+          <li class="pagination__arrow">&rsaquo;</li>
+          <li class="pagination__arrow">&raquo;</li>
+        </ul>
+        <form action="#" class="pagination pagination--custom">
+          <input
+            type="number"
+            min="1"
+            max="23"
+            class="pagination__goto"
+            placeholder="Page"
+          />
+          <input type="button" class="pagination__btn" value="Go to" />
+        </form>
+      </div>
     </section>
 
     <section class="contact">
@@ -402,13 +512,11 @@
       <div class="contact__content">
         <div class="contact__business">
           <div class="contact__items">
-            <a href="#" class="contact__name"
-              >Cibeunying Landeuh 71/144F, Bandung 40123, Indonesia</a
-            >
+            <a href="#" class="contact__name">agiothyella@gmail.com</a>
             <a href="#" class="contact__ilink">
               <svg class="contact__icon">
                 <use
-                  xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-location"
+                  xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-envelop"
                 ></use></svg
             ></a>
           </div>
@@ -422,11 +530,13 @@
             ></a>
           </div>
           <div class="contact__items">
-            <a href="#" class="contact__name">agiothyella@gmail.com</a>
+            <a href="#" class="contact__name"
+              >Cibeunying Landeuh 71/144F, Bandung 40123, Indonesia</a
+            >
             <a href="#" class="contact__ilink">
               <svg class="contact__icon">
                 <use
-                  xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-envelop"
+                  xlink:href="vendor/icon/icomoon/symbol-defs.svg#icon-location"
                 ></use></svg
             ></a>
           </div>
