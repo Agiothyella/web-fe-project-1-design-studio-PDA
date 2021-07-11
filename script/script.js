@@ -108,7 +108,7 @@ function showSlidesMessage() {
     "client__message--slided"
   );
 
-  timerMessage = setTimeout(showSlidesMessage, 20000);
+  timerMessage = setTimeout(showSlidesMessage, 10000);
 }
 
 // -- Message auto slider
@@ -126,7 +126,7 @@ function slideMessage(position) {
   removeMessage();
   displayMessage();
 
-  timerMessage = setTimeout(showSlidesMessage, 20000);
+  timerMessage = setTimeout(showSlidesMessage, 10000);
 }
 // --- Message manual slider
 // --------- Main functions

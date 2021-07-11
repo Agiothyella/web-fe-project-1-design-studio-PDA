@@ -609,6 +609,8 @@ img {
   left: 125%;
   width: inherit;
   opacity: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 300;
   text-align: center;
   transition: all 1.5s;
 }
@@ -624,7 +626,7 @@ img {
 }
 
 .client__quote {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-style: italic;
 }
 
@@ -641,14 +643,14 @@ img {
 .client__name {
   display: inline-block;
   margin: 3rem 0 0 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 
 .client__name span {
   display: block;
   margin-top: 0.3rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 500;
 }
 
