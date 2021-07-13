@@ -123,7 +123,6 @@
   }
 
   &__image {
-    object-fit: cover;
     width: 100%;
     height: 100%;
     filter: brightness(0.95);
@@ -161,6 +160,7 @@
 
     &--char-3 {
       grid-area: g3;
+      object-position: top;
     }
 
     &--cre-1 {
@@ -194,6 +194,7 @@
 
     &--props-2 {
       grid-area: g2;
+      object-position: top;
     }
 
     &--props-3 {

@@ -1,6 +1,7 @@
 .c-gallery {
   display: grid;
   width: 100%;
+  align-items: center;
 
   &__flex-column {
     display: flex;

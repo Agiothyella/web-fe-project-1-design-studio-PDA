@@ -1,6 +1,7 @@
 .container {
   display: grid;
   grid-template-rows: 100vh;
+  justify-items: center;
 }
 
 .header {
@@ -20,6 +21,7 @@
 }
 
 .about {
+  max-width: 190rem;
   padding: 8rem 13rem;
   margin-top: 6rem;
   font-family: "Montserrat", sans-serif;
@@ -27,9 +29,9 @@
 
 .service {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-
+  width: 100%;
   margin-top: 8rem;
   padding: 6rem 10rem 10rem 10rem;
   border: 2px solid $color-tertiary-dark;
@@ -40,13 +42,11 @@
 }
 
 .client {
-  padding: 6rem 10rem 10rem 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 4rem;
-  column-gap: 5rem;
-
+  width: 100%;
+  padding: 6rem 10rem 10rem 8rem;
   border: 2px solid $color-tertiary-dark;
   border-top: none;
   background-color: $color-tertiary-light;
@@ -58,7 +58,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 7rem 0 0 0;
+  padding: 10rem 0 0 0;
   border-bottom: 2px solid $color-secondary-light;
   background-color: $color-secondary;
   color: $color-font-light;
@@ -66,6 +66,7 @@
 }
 
 .contact {
+  max-width: 190rem;
   padding: 13rem 13rem 8rem 13rem;
   font-family: "Montserrat", sans-serif;
 }
@@ -75,10 +76,29 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 3rem 2rem 3.5rem 2rem;
   gap: 3rem;
   border: 2px solid $color-tertiary-dark;
   background-color: $color-tertiary;
   color: $color-font-light;
   font-family: "Montserrat", sans-serif;
+}
+
+.section-wrapper {
+  max-width: 155rem;
+
+  &--client {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4rem;
+    column-gap: 5rem;
+  }
+
+  &--service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

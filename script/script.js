@@ -1,6 +1,17 @@
 `use strict`;
 
-// Variable --
+// Variable -------
+// Popup ---
+const popup = document.querySelectorAll(".popup");
+const popupL = document.querySelector(".popup--landscape");
+const popupP = document.querySelector(".popup--potrait");
+const overlay = document.querySelector(".popup__overlay");
+const triggerClosePopup = document.querySelectorAll(".popup__close");
+const triggerShowPopupL = document.querySelectorAll(".art__artwork--landscape");
+const triggerShowPopupP = document.querySelectorAll(".art__artwork--potrait");
+// --- Popup
+
+// Slider ---
 const slideImg = document.getElementsByClassName("slider__img");
 const slideTxt = document.getElementsByClassName("slider__text");
 const slideDesign = document.getElementsByClassName("service__design");
@@ -19,9 +30,48 @@ let indexMessage = Math.floor(Math.random() * slideClientMessage.length) + 1;
 
 let indexMessageNext = indexMessage - 1;
 let timerHead, timerDesign, timerMessage;
-// -- Variable
+// --- Slider
+// ------- Variable
 
 // Main functions ---------
+// Popup ---
+function closePopup() {
+  for (let i = 0; i < popup.length; i++) {
+    popup[i].classList.remove("u-display--block", "open-popup");
+  }
+  overlay.classList.remove("u-display--block", "open-overlay");
+}
+
+function openPopup(popupPass) {
+  popupPass.classList.add("u-display--block", "open-popup");
+  overlay.classList.add("u-display--block", "open-overlay");
+}
+
+function addShowListener(which, popupPass) {
+  for (let i = 0; i < which.length; i++) {
+    which[i].addEventListener("click", function () {
+      openPopup(popupPass);
+    });
+  }
+}
+
+for (let i = 0; i < triggerClosePopup.length; i++) {
+  triggerClosePopup[i].addEventListener("click", closePopup);
+}
+
+overlay.addEventListener("click", closePopup);
+
+document.addEventListener("keydown", function (event) {
+  console.log(event.key);
+  if (event.key === "Escape") {
+    if (popup.classList.contains("u-display--block")) {
+      closePopup();
+    }
+  }
+});
+// --- Popup
+
+// Slider --------
 // Head auto slider ---
 function showSlidesHead() {
   removeHead();
@@ -108,9 +158,8 @@ function showSlidesMessage() {
     "client__message--slided"
   );
 
-  timerMessage = setTimeout(showSlidesMessage, 10000);
+  timerMessage = setTimeout(showSlidesMessage, 12000);
 }
-
 // -- Message auto slider
 
 // Message manual slider ---
@@ -126,9 +175,10 @@ function slideMessage(position) {
   removeMessage();
   displayMessage();
 
-  timerMessage = setTimeout(showSlidesMessage, 10000);
+  timerMessage = setTimeout(showSlidesMessage, 12000);
 }
 // --- Message manual slider
+// -------- Slider
 // --------- Main functions
 
 // Modules ---------
@@ -156,28 +206,28 @@ function checkSlides(index, slide) {
 // Remove head ---
 function removeHead() {
   for (i = 0; i < slideImg.length; i++) {
-    slideImg[i].classList.remove("u-slide-visible");
+    slideImg[i].classList.remove("u-visible");
     slideDot[i].classList.remove("slider__dot--active");
   }
 
   for (i = 0; i < slideTxt.length; i++) {
-    slideTxt[i].classList.remove("u-slide-visible");
+    slideTxt[i].classList.remove("u-visible");
   }
 }
 // --- Remove head
 
 // Display head ---
 function displayHead() {
-  slideImg[indexImg - 1].classList.add("u-slide-visible");
-  slideTxt[indexTxt - 1].classList.add("u-slide-visible");
+  slideImg[indexImg - 1].classList.add("u-visible");
+  slideTxt[indexTxt - 1].classList.add("u-visible");
   slideDot[indexImg - 1].classList.add("slider__dot--active");
 }
 // --- Display head
 
 // Display service ---
 function displayService() {
-  slideDesignText[indexDesign - 1].classList.add("u-slide-display--block");
-  slideDesignImages[indexDesign - 1].classList.add("u-slide-display--grid");
+  slideDesignText[indexDesign - 1].classList.add("u-display--block");
+  slideDesignImages[indexDesign - 1].classList.add("u-display--grid");
   slideDesign[indexDesign - 1].classList.add("service__design--active");
 }
 // --- Display service
@@ -186,8 +236,8 @@ function displayService() {
 function removeService() {
   for (i = 0; i < slideDesign.length; i++) {
     slideDesign[i].classList.remove("service__design--active");
-    slideDesignText[i].classList.remove("u-slide-display--block");
-    slideDesignImages[i].classList.remove("u-slide-display--grid");
+    slideDesignText[i].classList.remove("u-display--block");
+    slideDesignImages[i].classList.remove("u-display--grid");
   }
 }
 // --- Remove service
@@ -228,6 +278,9 @@ function displayMessage() {
 showSlidesHead();
 showSlidesService();
 showSlidesMessage();
+
+addShowListener(triggerShowPopupL, popupL);
+addShowListener(triggerShowPopupP, popupP);
 
 //
 //

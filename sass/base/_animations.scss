@@ -1,7 +1,7 @@
 .slide-fade {
   animation-name: slide-fade;
   animation-duration: 0.8s;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-in-out;
 }
 
 .progress-10s {
@@ -13,6 +13,18 @@
 .progress-25s {
   animation-name: progress-animation;
   animation-duration: 24.9s;
+  animation-timing-function: linear;
+}
+
+.open-popup {
+  animation-name: open-popup;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+}
+
+.open-overlay {
+  animation-name: open-overlay;
+  animation-duration: 0.2s;
   animation-timing-function: linear;
 }
 
@@ -35,5 +47,23 @@
   100% {
     transform: scaleX(1);
     opacity: 1;
+  }
+}
+
+@keyframes open-popup {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes open-overlay {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: rgba($color-secondary-dark, 0.95);
   }
 }
