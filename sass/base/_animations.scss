@@ -67,3 +67,12 @@
     background-color: rgba($color-secondary-dark, 0.95);
   }
 }
+
+@keyframes shine {
+  0% {
+    background-position: -4rem;
+  }
+  100% {
+    background-position: 30rem;
+  }
+}

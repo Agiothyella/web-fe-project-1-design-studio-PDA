@@ -31,6 +31,11 @@ let indexMessage = Math.floor(Math.random() * slideClientMessage.length) + 1;
 let indexMessageNext = indexMessage - 1;
 let timerHead, timerDesign, timerMessage;
 // --- Slider
+
+// Sticky nav ---
+
+// --- Sticky nav
+const navigation = document.querySelector(".nav");
 // ------- Variable
 
 // Main functions ---------
@@ -64,9 +69,7 @@ overlay.addEventListener("click", closePopup);
 document.addEventListener("keydown", function (event) {
   console.log(event.key);
   if (event.key === "Escape") {
-    if (popup.classList.contains("u-display--block")) {
-      closePopup();
-    }
+    closePopup();
   }
 });
 // --- Popup
@@ -275,106 +278,24 @@ function displayMessage() {
 // --- Display message
 // --------- Modules
 
+// Main -----
+// Sticky nav---
+const stickyNav = new Waypoint({
+  element: document.querySelector(".js-nav-waypoint"),
+  handler: function (direction) {
+    navigation.classList.toggle("sticky-nav");
+  },
+});
+// --- Sticky nav
+
+// Sliders ---
 showSlidesHead();
 showSlidesService();
 showSlidesMessage();
+// --- Sliders
 
+// Popup ---
 addShowListener(triggerShowPopupL, popupL);
 addShowListener(triggerShowPopupP, popupP);
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-// Get Scroll Coordinate ---
-// function getScrollTop() {
-//   if (typeof window.pageYOffset !== "undefined") {
-//     // Most browsers
-//     return window.pageYOffset;
-//   }
-//   const d = document.documentElement;
-//   if (typeof d.clientHeight !== "undefined") {
-//     // IE in standards mode
-//     return d.scrollTop;
-//   }
-//   // IE in quirks mode
-//   return document.body.scrollTop;
-// }
-// --- Get Scroll Coordinate
-
-// Slideshow Functions ---
-
-// function currentSlideService(activeNumber) {
-//   showSlidesService((indexDesign = activeNumber));
-// }
-// --- Slideshow Functions
-
-// const banner = document.querySelector(".agt-banner");
-// const bannerHeight = banner.offsetHeight;
-// const slideshowHeight = document.querySelector(
-//   ".slideshow-container"
-// ).offsetHeight;
-// const botNavHeight = document.querySelector(".agt-banner-nav").offsetHeight;
-// const checkpoint = slideshowHeight + 8 - botNavHeight;
-
-// window.onscroll = function () {
-//   navbarHide();
-//   navBgFade();
-// };
-
-// function navBgFade() {
-//   let opacity;
-//   let scroll = getScrollTop();
-//   const bgWhite = document.querySelector(".agt-white");
-
-//   if (scroll > checkpoint && scroll < checkpoint + botNavHeight) {
-//     opacity = 0;
-//   } else {
-//     opacity = 1;
-//   }
-//   bgWhite.style.backgroundColor = `rgba(255, 255, 255, ${opacity})`;
-// }
-
-// function navbarHide() {
-//   let scroll = getScrollTop();
-//   const topNav = document.querySelector(".agt-top");
-//   if (scroll > checkpoint) {
-//     topNav.style.opacity = "1";
-//     banner.style.opacity = "0";
-//   } else {
-//     topNav.style.opacity = "0";
-//     banner.style.opacity = "1";
-//   }
-// }
+// --- Popup
+// ----- Main

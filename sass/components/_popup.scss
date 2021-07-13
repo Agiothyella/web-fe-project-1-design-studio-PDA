@@ -92,8 +92,8 @@
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: rgba($color-secondary-dark, 0.95);
-    z-index: 5;
+    background-color: rgba($color-secondary-dark, 0.98);
+    z-index: 9;
 
     @supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0)) {
       backdrop-filter: blur(10px);

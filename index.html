@@ -31,7 +31,7 @@
     <title>Agiothyella Design Studios</title>
   </head>
   <body class="container">
-    <header class="header">
+    <header id="header" class="header">
       <!-- Image Slider -->
       <div class="slider__container slider__container--img">
         <div class="slider__img">
@@ -76,7 +76,7 @@
           <h2 class="t-header-2 t-header-2--title">Design Studios</h2>
         </div>
 
-        <div class="header__nav">
+        <div class="header__nav js-nav-waypoint">
           <div class="slider__container slider__container--text">
             <div class="slider__text">Explore the Ideas</div>
             <div class="slider__text">Imagine the Impossible</div>
@@ -84,7 +84,7 @@
             <div class="slider__text">Discover the Extraordinary</div>
           </div>
 
-          <ul class="header__list">
+          <ul class="nav__list">
             <li class="header__item">
               <a href="#about" class="header__link">About</a>
             </li>
@@ -104,27 +104,24 @@
     </header>
 
     <nav class="nav">
-      <div class="nav__title">Agiothyella Design Studios</div>
+      <a href="#header" class="nav__title">Agiothyella Design Studios</a>
       <ul class="nav__list">
         <li class="nav__item">
           <a href="#about" class="nav__link">About</a>
         </li>
         <li class="nav__item">
-          <a href="#services" class="header__link">Services</a>
+          <a href="#services" class="nav__link">Services</a>
         </li>
         <li class="nav__item">
-          <a href="#art" class="header__link">Portofolio</a>
+          <a href="#art" class="nav__link">Portofolio</a>
         </li>
         <li class="nav__item">
           <a href="#contact" class="nav__link">Contact</a>
         </li>
       </ul>
-
-      <div class="nav__animation nav__animation--left">&nbsp;</div>
-      <div class="nav__animation nav__animation--right">&nbsp;</div>
     </nav>
 
-    <section class="about">
+    <section id="about" class="about">
       <div class="about__title u-margin-bottom-medium">
         <h3 class="t-header-3">About Us</h3>
       </div>
@@ -153,7 +150,7 @@
       </div>
     </section>
 
-    <section class="service">
+    <section id="services" class="service">
       <div class="section-wrapper section-wrapper--service">
         <div class="service__title u-center-text u-margin-bottom-medium">
           <h3 class="t-header-3">What we do</h3>
@@ -400,7 +397,7 @@
       </div>
     </section>
 
-    <section class="art">
+    <section id="art" class="art">
       <div class="art__title u-center-text">
         <h3 class="t-header-3">Our Works</h3>
       </div>
@@ -610,7 +607,7 @@
       </div>
     </section>
 
-    <section class="contact">
+    <section id="contact" class="contact">
       <div class="contact__title u-margin-bottom-medium">
         <h3 class="t-header-3">Contact Us</h3>
       </div>
@@ -811,8 +808,8 @@
     <!--  -->
 
     <!-- Script -->
-    <script src="script/script.js"></script>
     <script src="vendor/js/noframework.waypoints.min.js"></script>
+    <script src="script/script.js"></script>
     <!-- ------ -->
   </body>
 </html>
