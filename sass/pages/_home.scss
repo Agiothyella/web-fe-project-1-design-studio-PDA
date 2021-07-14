@@ -29,6 +29,14 @@
   padding: 9rem 13rem;
   margin-top: 5rem;
   font-family: "Montserrat", sans-serif;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding: 9rem 10rem;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 9rem 8rem;
+  }
 }
 
 .service {
@@ -43,6 +51,14 @@
   background-color: $color-tertiary;
   color: $color-font-light;
   font-family: "Montserrat", sans-serif;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding: 9rem 8rem 10rem 8rem;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 9rem 6rem 10rem 6rem;
+  }
 }
 
 .client {
@@ -50,12 +66,20 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 6rem 10rem 10rem 8rem;
+  padding: 6rem 10rem 8rem 10rem;
   border: 2px solid $color-tertiary-dark;
   border-top: none;
   background-color: $color-tertiary-light;
   color: $color-font-light;
   font-family: "Montserrat", sans-serif;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding: 6rem 8rem 8rem 8rem;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 6rem 6rem 8rem 6rem;
+  }
 }
 
 .art {
@@ -70,9 +94,18 @@
 }
 
 .contact {
+  width: 100%;
   max-width: 190rem;
   padding: 13rem 13rem 8rem 13rem;
   font-family: "Montserrat", sans-serif;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding: 13rem 10rem 8rem 10rem;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 13rem 8rem 8rem 8rem;
+  }
 }
 
 .footer {

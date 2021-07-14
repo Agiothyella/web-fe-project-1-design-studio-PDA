@@ -29,8 +29,15 @@
     justify-items: center;
     align-content: space-around;
     align-items: center;
-    gap: 2%;
+    column-gap: 2%;
     width: 100%;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, max-content);
+      grid-template-areas: "c03 c04 c05 c06" "c01 c02 c07 c08";
+      // row-gap: 5rem;
+    }
   }
 
   &__company {
@@ -59,14 +66,14 @@
     align-items: center;
     column-gap: 6rem;
     width: 100%;
-    margin: 6rem 8rem 0 8rem;
+    margin: 5rem 8rem 0 8rem;
 
     @media only screen and (max-width: $bp-largest) {
-      margin: 5rem 8rem 0 8rem;
+      margin: 4rem 8rem 0 8rem;
     }
 
     @media only screen and (max-width: $bp-large) {
-      margin: 3rem 8rem 2rem 8rem;
+      margin: 3rem 8rem 0 8rem;
     }
   }
 
@@ -94,6 +101,10 @@
     @media only screen and (max-width: $bp-large) {
       height: 17rem;
     }
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 19rem;
+    }
   }
 
   &__message {
@@ -109,6 +120,10 @@
 
     @media only screen and (max-width: $bp-large) {
       height: 17rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 19rem;
     }
 
     &--active {

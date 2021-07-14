@@ -8,6 +8,10 @@
       width: 21%;
     }
 
+    @media only screen and (max-width: $bp-medium) {
+      width: 30%;
+    }
+
     &::after {
       width: 100%;
       height: 2px;

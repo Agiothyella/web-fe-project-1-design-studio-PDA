@@ -21,11 +21,11 @@
     transition: all 0.3s 0.1s;
 
     &--landscape {
-      grid-template-rows: 50vh min-content;
+      grid-template-rows: 50vh minmax(min-content, 45vh);
     }
 
     &--potrait {
-      grid-template-columns: 50% 1fr;
+      grid-template-columns: 50% minmax(min-content, 1fr);
     }
   }
 

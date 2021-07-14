@@ -8,6 +8,10 @@
       width: 16%;
     }
 
+    @media only screen and (max-width: $bp-medium) {
+      width: 23%;
+    }
+
     &::after {
       width: 100%;
       height: 2px;
@@ -22,6 +26,25 @@
     justify-content: flex-end;
     width: 90%;
     margin-bottom: 1rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+
+    form {
+      @media only screen and (max-width: $bp-medium) {
+        width: 100%;
+      }
+    }
+
+    input {
+      @media only screen and (max-width: $bp-medium) {
+        width: 100%;
+        border-radius: 0;
+      }
+    }
   }
 
   &__showcase {
