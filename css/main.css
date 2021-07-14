@@ -70,7 +70,7 @@
 
 @keyframes shine {
   0% {
-    background-position: -4rem;
+    background-position: -3.5rem;
   }
   100% {
     background-position: 30rem;
@@ -118,7 +118,7 @@ body {
 }
 
 img {
-  font-size: 1rem;
+  font-size: 1.2rem;
   object-fit: cover;
   object-position: center;
 }
@@ -581,7 +581,7 @@ img {
 .about__content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   gap: 10rem;
 }
 
@@ -614,6 +614,7 @@ img {
   flex: 0 0 25%;
   width: 100%;
   box-shadow: 0 0 0.5rem #f8b500;
+  object-position: left;
 }
 
 .art__title {
@@ -862,7 +863,7 @@ img {
 
 .contact__title {
   display: inline-block;
-  width: 18%;
+  width: 20%;
   margin: 0 auto;
 }
 
@@ -997,12 +998,12 @@ img {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   display: grid;
-  grid-template-columns: max-content max-content;
-  column-gap: 10rem;
+  grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content);
+  column-gap: 8rem;
   margin: 0 5rem;
   row-gap: 1.5rem;
   justify-items: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .contact__more-text {
@@ -1010,7 +1011,8 @@ img {
   padding: 0 1.5rem 1rem 1.5rem;
   border-bottom: 1px solid #f8b500;
   color: #1f1f1f;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  text-align: center;
 }
 
 .footer__nav {
@@ -1195,13 +1197,13 @@ img {
 }
 
 .nav__title:link, .nav__title:visited {
-  padding: 1.5rem 2.5rem;
+  padding: 1.5rem 2rem;
   overflow: hidden;
   color: transparent;
   font-size: 1.5rem;
   text-decoration: none;
   background: linear-gradient(to right, #000 0, #f8b500 10%, #000 20%);
-  background-position: -4rem;
+  background-position: -3.5rem;
   background-clip: text;
 }
 

@@ -6,7 +6,7 @@
   &__title {
     &:link,
     &:visited {
-      padding: 1.5rem 2.5rem;
+      padding: 1.5rem 2rem;
       overflow: hidden;
       color: transparent;
       font-size: 1.5rem;
@@ -17,7 +17,7 @@
         $color-quartenery 10%,
         $color-font-dark 20%
       );
-      background-position: -4rem;
+      background-position: -3.5rem;
       background-clip: text;
 
       @supports (not (background-clip: text)) or
