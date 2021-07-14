@@ -614,6 +614,11 @@ img {
   flex: 0 0 25%;
   width: 100%;
   box-shadow: 0 0 0.5rem #f8b500;
+}
+
+.about__picture img {
+  width: 100%;
+  height: 100%;
   object-position: left;
 }
 

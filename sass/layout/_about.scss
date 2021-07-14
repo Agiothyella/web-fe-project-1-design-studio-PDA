@@ -47,6 +47,11 @@
     flex: 0 0 25%;
     width: 100%;
     box-shadow: 0 0 0.5rem $color-quartenery;
-    object-position: left;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-position: left;
+    }
   }
 }
