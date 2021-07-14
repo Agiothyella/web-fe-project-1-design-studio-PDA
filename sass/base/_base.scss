@@ -34,6 +34,10 @@ html {
     background-color: $color-tertiary;
   }
   // --- Scrollbar
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
 }
 
 body {

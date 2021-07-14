@@ -154,4 +154,10 @@
       background-color: $color-quartenery;
     }
   }
+
+  &__hero {
+    &--1 {
+      object-position: left;
+    }
+  }
 }

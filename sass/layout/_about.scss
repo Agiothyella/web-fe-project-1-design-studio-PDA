@@ -3,6 +3,10 @@
     display: inline-block;
     width: 13%;
 
+    @media only screen and (max-width: $bp-large) {
+      width: 17%;
+    }
+
     &::after {
       width: 100%;
       height: 2px;

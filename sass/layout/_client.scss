@@ -59,8 +59,15 @@
     align-items: center;
     column-gap: 6rem;
     width: 100%;
-    height: 14rem;
-    margin: 8rem 8rem 0 8rem;
+    margin: 6rem 8rem 0 8rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      margin: 5rem 8rem 0 8rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      margin: 3rem 8rem 2rem 8rem;
+    }
   }
 
   &__message-arrow {
@@ -83,18 +90,26 @@
     width: 100%;
     overflow: hidden;
     height: 14rem;
+
+    @media only screen and (max-width: $bp-large) {
+      height: 17rem;
+    }
   }
 
   &__message {
     display: flex;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 125%;
     width: inherit;
     opacity: 0;
 
     text-align: center;
     transition: all 1s ease-out;
+
+    @media only screen and (max-width: $bp-large) {
+      height: 17rem;
+    }
 
     &--active {
       opacity: 1;
@@ -113,6 +128,10 @@
     font-size: 2rem;
     font-style: italic;
     text-shadow: 0 0 1rem $color-tertiary;
+
+    @media only screen and (max-width: $bp-large) {
+      margin-top: auto;
+    }
 
     p {
       &::before {

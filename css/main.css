@@ -112,6 +112,12 @@ html::-webkit-scrollbar-thumb {
   background-color: #5c636e;
 }
 
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   background-color: #f7f7f7;
   color: #000;
@@ -569,6 +575,12 @@ img {
   width: 13%;
 }
 
+@media only screen and (max-width: 62.5em) {
+  .about__title {
+    width: 17%;
+  }
+}
+
 .about__title::after {
   width: 100%;
   height: 2px;
@@ -624,8 +636,14 @@ img {
 
 .art__title {
   display: inline-block;
-  width: 16%;
+  width: 12%;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .art__title {
+    width: 16%;
+  }
 }
 
 .art__title::after {
@@ -787,8 +805,19 @@ img {
   align-items: center;
   column-gap: 6rem;
   width: 100%;
-  height: 14rem;
-  margin: 8rem 8rem 0 8rem;
+  margin: 6rem 8rem 0 8rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .client__message-container {
+    margin: 5rem 8rem 0 8rem;
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
+  .client__message-container {
+    margin: 3rem 8rem 2rem 8rem;
+  }
 }
 
 .client__message-arrow {
@@ -812,15 +841,27 @@ img {
   height: 14rem;
 }
 
+@media only screen and (max-width: 62.5em) {
+  .client__messages {
+    height: 17rem;
+  }
+}
+
 .client__message {
   display: flex;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 125%;
   width: inherit;
   opacity: 0;
   text-align: center;
   transition: all 1s ease-out;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .client__message {
+    height: 17rem;
+  }
 }
 
 .client__message--active {
@@ -839,6 +880,12 @@ img {
   font-size: 2rem;
   font-style: italic;
   text-shadow: 0 0 1rem #5c636e;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .client__quote {
+    margin-top: auto;
+  }
 }
 
 .client__quote p::before {
@@ -868,8 +915,14 @@ img {
 
 .contact__title {
   display: inline-block;
-  width: 20%;
+  width: 16%;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .contact__title {
+    width: 20%;
+  }
 }
 
 .contact__title::after {
@@ -1009,6 +1062,14 @@ img {
   row-gap: 1.5rem;
   justify-items: center;
   align-items: flex-end;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .contact__more {
+    width: 100%;
+    grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content);
+    column-gap: 4rem;
+  }
 }
 
 .contact__more-text {
@@ -1195,6 +1256,10 @@ img {
   background-color: #f8b500;
 }
 
+.slider__hero--1 {
+  object-position: left;
+}
+
 .nav {
   top: -8.5rem;
   z-index: 8;
@@ -1256,6 +1321,12 @@ img {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 62.5em) {
+  .service__title {
+    width: 21%;
+  }
+}
+
 .service__title::after {
   width: 100%;
   height: 2px;
@@ -1309,6 +1380,12 @@ img {
   text-align: right;
 }
 
+@media only screen and (max-width: 62.5em) {
+  .service__text {
+    font-size: 1.4rem;
+  }
+}
+
 .service__composition {
   box-shadow: inset 0 0 10rem #6b7480, 0 0 1.5rem #6b7480;
 }
@@ -1354,6 +1431,14 @@ img {
   transition: transform 0.2s, filter 0.2s;
 }
 
+@media only screen and (hover: none) {
+  .service__image:active {
+    transform: scale(1.05);
+    filter: brightness(1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+}
+
 .service__image:hover {
   transform: scale(1.05);
   filter: brightness(1);
@@ -1397,6 +1482,12 @@ img {
   grid-area: g2;
 }
 
+@media only screen and (max-width: 62.5em) {
+  .service__image--cre-2 {
+    object-position: left;
+  }
+}
+
 .service__image--cre-3 {
   grid-area: g3;
   object-position: top;
@@ -1425,6 +1516,12 @@ img {
 
 .service__image--props-3 {
   grid-area: g3;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .service__image--props-3 {
+    object-position: left;
+  }
 }
 
 .service__bar {
