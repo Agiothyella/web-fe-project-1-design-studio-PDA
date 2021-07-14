@@ -88,6 +88,14 @@
     text-shadow: 0 0 0.2rem $color-quartenery, 0 0 0.5rem $color-primary,
       0 0 0.5rem $color-primary, 0 0 0.5rem $color-primary;
     transition: all 0.25s;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.8rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.7rem;
+    }
   }
 
   &__highlight {

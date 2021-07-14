@@ -24,6 +24,16 @@
     width: 100%;
     margin: 1.5rem 0;
     padding: 1rem 2rem;
+
+    ul {
+      @media only screen and (max-width: $bp-small) {
+        margin: 1.5rem auto;
+      }
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 1rem 2rem 0 2rem;
+    }
   }
 
   &__link {
@@ -51,6 +61,13 @@
         letter-spacing: 0.25rem;
       }
     }
+
+    @media only screen and (max-width: $bp-small) {
+      &:link,
+      &:visited {
+        margin: 0 4rem;
+      }
+    }
   }
 }
 
@@ -64,6 +81,10 @@
 
     &--text {
       width: 50%;
+
+      @media only screen and (max-width: $bp-small) {
+        display: none;
+      }
     }
   }
 

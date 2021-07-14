@@ -45,6 +45,26 @@
         animation: none;
       }
     }
+
+    @media only screen and (max-width: $bp-small) {
+      &:link,
+      &:visited {
+        display: none;
+      }
+    }
+  }
+
+  &__logo {
+    margin: 0 2rem;
+    img {
+      display: none;
+      height: 4.9rem;
+      width: auto;
+
+      @media only screen and (max-width: $bp-small) {
+        display: block;
+      }
+    }
   }
 
   &__list {
@@ -76,6 +96,13 @@
       &:link,
       &:visited {
         letter-spacing: 0.25rem;
+      }
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      &:link,
+      &:visited {
+        margin: 0 0.6rem;
       }
     }
   }
