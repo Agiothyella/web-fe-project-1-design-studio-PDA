@@ -69,10 +69,10 @@
 }
 
 @keyframes shine {
-  0% {
+  from {
     background-position: -3.5rem;
   }
-  100% {
+  to {
     background-position: 30rem;
   }
 }
