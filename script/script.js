@@ -33,9 +33,10 @@ let timerHead, timerDesign, timerMessage;
 // --- Slider
 
 // Small nav ---
-const smallNav = document.querySelector(".nav--small");
-// --- Small nav
 const navigation = document.querySelector(".nav");
+const smallNav = document.querySelector(".nav--small");
+const smallNavList = document.querySelectorAll(".nav__small-item");
+// --- Small nav
 // ------- Variable
 
 // Main functions ---------
@@ -187,6 +188,15 @@ function slideMessage(position) {
 function showNavSmall() {
   smallNav.classList.toggle("nav-visible");
 }
+
+function hideNavSmallClick() {
+  for (let i = 0; i < smallNavList.length; i++) {
+    smallNavList[i].addEventListener("click", function () {
+      smallNav.classList.remove("nav-visible");
+    });
+  }
+}
+
 // --- Show small nav
 // --------- Main functions
 
@@ -293,6 +303,19 @@ const stickyNav = new Waypoint({
   },
 });
 // --- Sticky nav
+
+// Show small nav ---
+const showNav = new Waypoint({
+  element: document.querySelector(".js-nav-waypoint"),
+  handler: function (direction) {
+    smallNav.classList.remove("nav-visible");
+  },
+});
+// --- Show small nav
+
+// Hide small nav ---
+hideNavSmallClick();
+// --- Hide small nav
 
 // Sliders ---
 showSlidesHead();

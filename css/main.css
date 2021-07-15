@@ -423,17 +423,18 @@ img {
   position: fixed;
   top: 50%;
   left: 50%;
+  height: 90%;
+  width: 60%;
   transform: translate(-50%, -50%);
   font-family: "Montserrat", sans-serif;
   z-index: 10;
-  width: 60%;
 }
 
 .popup__content {
   display: grid;
-  align-items: center;
+  align-items: stretch;
   position: relative;
-  max-height: 90vh;
+  height: 100%;
   width: 100%;
   border-radius: 0.3rem;
   background-color: #f7f7f7;
@@ -442,14 +443,16 @@ img {
 }
 
 .popup__content--landscape {
-  grid-template-rows: 50vh minmax(min-content, 45vh);
+  grid-template-rows: 50% minmax(min-content, 1fr);
+  grid-template-columns: 100%;
 }
 
 .popup__content--potrait {
   grid-template-columns: 50% minmax(min-content, 1fr);
+  grid-template-rows: 100%;
 }
 
-.popup__image {
+.popup__image img {
   width: 100%;
   height: 100%;
 }
@@ -459,6 +462,7 @@ img {
   flex-direction: column;
   row-gap: 2rem;
   padding: 2rem 5rem;
+  overflow: hidden;
 }
 
 .popup__description h4 {
