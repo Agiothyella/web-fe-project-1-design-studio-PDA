@@ -12,6 +12,11 @@
       width: 30%;
     }
 
+    @media only screen and (max-width: $bp-smallest) {
+      width: 100%;
+      text-align: center;
+    }
+
     &::after {
       width: 100%;
       height: 2px;
@@ -204,15 +209,12 @@
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     display: grid;
-    grid-template-columns: minmax(min-content, max-content) minmax(
-        min-content,
-        max-content
-      );
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
     column-gap: 8rem;
     margin: 0 5rem;
     row-gap: 1.5rem;
     justify-items: center;
-    align-items: flex-end;
+    align-items: end;
 
     @media only screen and (max-width: $bp-large) {
       column-gap: 4rem;
@@ -229,6 +231,12 @@
     @media only screen and (max-width: $bp-small) {
       justify-content: space-around;
     }
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2rem;
+      margin: 0 2rem;
+    }
   }
 
   &__more-text {
@@ -241,6 +249,22 @@
 
     @media only screen and (max-width: $bp-medium) {
       padding: 0 0 0.3rem 0;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 0 0.3rem 0;
+    }
+  }
+
+  &__btn {
+    &--deck {
+      text-align: center;
+    }
+
+    &--career {
+      @media only screen and (max-width: $bp-small) {
+        align-self: flex-start;
+      }
     }
   }
 }

@@ -84,7 +84,7 @@
             <div class="slider__text">Discover the Extraordinary</div>
           </div>
 
-          <ul class="nav__list">
+          <ul class="header__list">
             <li class="header__item">
               <a href="#about" class="header__link">About</a>
             </li>
@@ -105,9 +105,12 @@
 
     <nav class="nav">
       <a href="#header" class="nav__title">Agiothyella Design Studios</a>
-      <a href="#header" class="nav__logo"
-        ><img src="img/logo-small-wide.png" alt="Agiothyella"
-      /></a>
+      <a href="#header" class="nav__logo nav__logo--wide">
+        <img src="img/logo-small-wide.png" alt="Agiothyella" />
+      </a>
+      <a href="#header" class="nav__logo nav__logo--small"
+        ><img src="img/logo-small.png" alt="Agiothyella" />
+      </a>
       <ul class="nav__list">
         <li class="nav__item">
           <a href="#about" class="nav__link">About</a>
@@ -120,6 +123,24 @@
         </li>
         <li class="nav__item">
           <a href="#contact" class="nav__link">Contact</a>
+        </li>
+      </ul>
+      <div class="nav__btn" onclick="showNavSmall()">&Congruent;</div>
+    </nav>
+
+    <nav class="nav--small">
+      <ul class="nav__small-list">
+        <li class="nav__small-item">
+          <a href="#about" class="nav__small-link">About</a>
+        </li>
+        <li class="nav__small-item">
+          <a href="#services" class="nav__small-link">Services</a>
+        </li>
+        <li class="nav__small-item">
+          <a href="#art" class="nav__small-link">Portofolio</a>
+        </li>
+        <li class="nav__small-item">
+          <a href="#contact" class="nav__small-link">Contact</a>
         </li>
       </ul>
     </nav>

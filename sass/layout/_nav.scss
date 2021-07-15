@@ -56,13 +56,31 @@
 
   &__logo {
     margin: 0 2rem;
-    img {
-      display: none;
-      height: 4.9rem;
-      width: auto;
+    display: none;
 
+    &--wide {
       @media only screen and (max-width: $bp-small) {
         display: block;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        display: none;
+      }
+
+      img {
+        height: 4.6rem;
+        width: auto;
+      }
+    }
+
+    &--small {
+      @media only screen and (max-width: $bp-smallest) {
+        display: block;
+      }
+
+      img {
+        height: 5.372rem;
+        width: auto;
       }
     }
   }
@@ -71,6 +89,14 @@
     display: flex;
     flex-direction: row;
     list-style: none;
+
+    @media only screen and (max-width: $bp-smallest) {
+      display: none;
+    }
+
+    &--small {
+      display: flex;
+    }
   }
 
   &__link {
@@ -89,7 +115,7 @@
     &:hover,
     &:active {
       border-bottom: 3px solid $color-quartenery;
-      box-shadow: inset 0 -2rem 4.5rem -5rem $color-tertiary;
+      box-shadow: inset 0 -2rem 4.5rem -4rem $color-quartenery;
     }
 
     @media only screen and (max-width: $bp-medium) {
@@ -106,8 +132,78 @@
       }
     }
   }
+
+  &__btn {
+    display: none;
+    font-size: 3.5rem;
+    padding: 0 1rem;
+    cursor: pointer;
+    letter-spacing: 0;
+    color: $color-tertiary-dark;
+    font-family: "Barlow", sans-serif;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $color-quartenery;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      display: block;
+    }
+  }
+
+  &--small {
+    align-items: center;
+    position: fixed;
+    top: -5.5rem;
+    width: 100%;
+    padding: 1.6rem 0.5rem;
+    box-shadow: 0 0.1rem 0.5rem $color-secondary-light;
+    background-color: rgba($color-primary, 0.97);
+    opacity: 1;
+    visibility: visible;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.1s;
+    z-index: 7;
+
+    @media only screen and (min-width: $bp-smallest) {
+      display: none;
+    }
+  }
+
+  &__small-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+  }
+
+  &__small-link {
+    &:link,
+    &:visited {
+      padding: 1.3rem 0.8rem;
+      margin: 0 1rem;
+      border-bottom: 3px solid transparent;
+      overflow: hidden;
+      color: $color-font-dark;
+      font-size: 1.5rem;
+      letter-spacing: 0.2rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      border-bottom: 3px solid $color-quartenery;
+      box-shadow: inset 0 -2rem 4.5rem -4rem $color-quartenery;
+    }
+  }
 }
 
 .sticky-nav {
   top: 0;
+}
+
+.nav-visible {
+  top: 5.5rem;
 }

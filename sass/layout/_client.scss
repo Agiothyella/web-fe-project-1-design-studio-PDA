@@ -38,6 +38,14 @@
       grid-template-areas: "c03 c04 c05 c06" "c01 c02 c07 c08";
       // row-gap: 5rem;
     }
+
+    @media only screen and (max-width: $bp-client-break) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, max-content);
+      grid-template-areas: "c04 c05" "c03 c06";
+      // grid-template-areas: "c04 c05" "c03 c06" "c01 c02" "c07 c08";
+      row-gap: 5rem;
+    }
   }
 
   &__company {
@@ -79,6 +87,15 @@
     @media only screen and (max-width: $bp-small) {
       margin: 1rem 8rem 0 8rem;
     }
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin: 1rem 3rem 0 3rem;
+      column-gap: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-client-break) {
+      margin: 1rem 0 0 0;
+    }
   }
 
   &__message-arrow {
@@ -91,6 +108,10 @@
     &:hover,
     &:active {
       color: $color-quartenery;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 0;
     }
   }
 
@@ -108,6 +129,10 @@
 
     @media only screen and (max-width: $bp-medium) {
       height: 19rem;
+    }
+
+    @media only screen and (max-width: $bp-client-break) {
+      height: 21.5rem;
     }
   }
 
@@ -128,6 +153,10 @@
 
     @media only screen and (max-width: $bp-medium) {
       height: 19rem;
+    }
+
+    @media only screen and (max-width: $bp-client-break) {
+      height: 21.5rem;
     }
 
     &--active {

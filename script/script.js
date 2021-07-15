@@ -32,9 +32,9 @@ let indexMessageNext = indexMessage - 1;
 let timerHead, timerDesign, timerMessage;
 // --- Slider
 
-// Sticky nav ---
-
-// --- Sticky nav
+// Small nav ---
+const smallNav = document.querySelector(".nav--small");
+// --- Small nav
 const navigation = document.querySelector(".nav");
 // ------- Variable
 
@@ -182,6 +182,12 @@ function slideMessage(position) {
 }
 // --- Message manual slider
 // -------- Slider
+
+// Show small nav ---
+function showNavSmall() {
+  smallNav.classList.toggle("nav-visible");
+}
+// --- Show small nav
 // --------- Main functions
 
 // Modules ---------

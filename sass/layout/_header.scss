@@ -15,6 +15,18 @@
   &__title {
     padding: 0.5rem;
     margin: 3.5rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin: 7.5rem 0;
+      padding: 0;
+    }
+
+    h1 {
+      @media only screen and (max-width: $bp-smallest) {
+        padding: 0;
+        margin: 0;
+      }
+    }
   }
 
   &__nav {
@@ -25,15 +37,22 @@
     margin: 1.5rem 0;
     padding: 1rem 2rem;
 
-    ul {
-      @media only screen and (max-width: $bp-small) {
-        margin: 1.5rem auto;
-      }
-    }
-
     @media only screen and (max-width: $bp-small) {
       padding: 1rem 2rem 0 2rem;
     }
+
+    ul {
+      @media only screen and (max-width: $bp-small) {
+        width: 100%;
+        justify-content: space-around;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
   }
 
   &__link {
@@ -66,6 +85,12 @@
       &:link,
       &:visited {
         margin: 0 4rem;
+      }
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      &:link,
+      &:visited {
+        margin: 0 auto;
       }
     }
   }
@@ -191,6 +216,9 @@
   &__hero {
     &--1 {
       object-position: left;
+      @media only screen and (max-width: $bp-smallest) {
+        object-position: center;
+      }
     }
   }
 }

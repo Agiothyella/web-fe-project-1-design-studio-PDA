@@ -37,6 +37,10 @@
   @media only screen and (max-width: $bp-large) {
     padding: 9rem 8rem;
   }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 9rem 3rem 5rem 3rem;
+  }
 }
 
 .service {
@@ -59,6 +63,10 @@
   @media only screen and (max-width: $bp-large) {
     padding: 9rem 6rem 10rem 6rem;
   }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 9rem 3rem 10rem 3rem;
+  }
 }
 
 .client {
@@ -79,6 +87,10 @@
 
   @media only screen and (max-width: $bp-large) {
     padding: 6rem 6rem 8rem 6rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 6rem 3rem 8rem 3rem;
   }
 }
 
@@ -114,6 +126,10 @@
   @media only screen and (max-width: $bp-small) {
     padding: 10rem 8rem 4rem 8rem;
   }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 10rem 3rem 4rem 3rem;
+  }
 }
 
 .footer {
@@ -128,9 +144,14 @@
   background-color: $color-tertiary;
   color: $color-font-light;
   font-family: "Montserrat", sans-serif;
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex-direction: column;
+  }
 }
 
 .section-wrapper {
+  width: 100%;
   max-width: 155rem;
 
   &--client {
