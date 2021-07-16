@@ -18,8 +18,13 @@
   }
 
   &--potrait {
-    height: 60%;
-    width: 80%;
+    height: 80%;
+    width: 60%;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 80%;
+      width: 75%;
+    }
 
     @media only screen and (max-width: $bp-smallest) {
       height: 80%;
