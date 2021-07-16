@@ -3,11 +3,29 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  height: 90%;
-  width: 60%;
   transform: translate(-50%, -50%);
   font-family: "Montserrat", sans-serif;
   z-index: 10;
+
+  &--landscape {
+    height: 80%;
+    width: 60%;
+
+    @media only screen and (max-width: $bp-smallest) {
+      height: 80%;
+      width: 80%;
+    }
+  }
+
+  &--potrait {
+    height: 60%;
+    width: 80%;
+
+    @media only screen and (max-width: $bp-smallest) {
+      height: 80%;
+      width: 80%;
+    }
+  }
 
   &__content {
     display: grid;
@@ -22,13 +40,23 @@
     transition: all 0.3s 0.1s;
 
     &--landscape {
-      grid-template-rows: 50% minmax(min-content, 1fr);
+      grid-template-rows: 50% minmax(0, 100%);
       grid-template-columns: 100%;
+
+      @media only screen and (max-width: $bp-popup-break) {
+        grid-template-rows: minmax(0, 100%) min-content;
+        grid-template-columns: 100%;
+      }
     }
 
     &--potrait {
       grid-template-columns: 50% minmax(min-content, 1fr);
       grid-template-rows: 100%;
+
+      @media only screen and (max-width: $bp-popup-break) {
+        grid-template-columns: 100%;
+        grid-template-rows: minmax(0, 100%) min-content;
+      }
     }
   }
 
@@ -44,7 +72,19 @@
     flex-direction: column;
     row-gap: 2rem;
     padding: 2rem 5rem;
-    overflow: hidden;
+    margin: 1rem 0;
+    width: 100%;
+    overflow-y: auto;
+
+    @include scrollTemplate();
+
+    @media only screen and (max-width: $bp-popup-break) {
+      flex-direction: row;
+      justify-content: space-between;
+      column-gap: 3rem;
+      padding: 1rem 2rem;
+      margin: 0;
+    }
 
     h4 {
       display: grid;
@@ -58,6 +98,10 @@
 
         @include pseudoLine;
       }
+
+      @media only screen and (max-width: $bp-popup-break) {
+        flex: 1;
+      }
     }
   }
 
@@ -66,18 +110,26 @@
     flex-direction: row;
     column-gap: 3rem;
     font-size: 1.2rem;
+
+    @media only screen and (max-width: $bp-popup-break) {
+      display: none;
+    }
   }
 
   &__text {
     font-size: 1.4rem;
     text-align: justify;
     line-height: 1.5;
+
+    @media only screen and (max-width: $bp-popup-break) {
+      display: none;
+    }
   }
 
   &__btn {
     align-self: flex-end;
     width: max-content;
-    margin: 1rem 0;
+    margin-top: auto;
     font-size: 1.4rem;
   }
 

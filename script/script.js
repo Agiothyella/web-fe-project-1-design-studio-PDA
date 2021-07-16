@@ -34,7 +34,7 @@ let timerHead, timerDesign, timerMessage;
 
 // Small nav ---
 const navigation = document.querySelector(".nav");
-const smallNav = document.querySelector(".nav--small");
+const smallNav = document.querySelector(".nav__small");
 const smallNavList = document.querySelectorAll(".nav__small-item");
 // --- Small nav
 // ------- Variable
@@ -60,19 +60,6 @@ function addShowListener(which, popupPass) {
     });
   }
 }
-
-for (let i = 0; i < triggerClosePopup.length; i++) {
-  triggerClosePopup[i].addEventListener("click", closePopup);
-}
-
-overlay.addEventListener("click", closePopup);
-
-document.addEventListener("keydown", function (event) {
-  console.log(event.key);
-  if (event.key === "Escape") {
-    closePopup();
-  }
-});
 // --- Popup
 
 // Slider --------
@@ -188,15 +175,6 @@ function slideMessage(position) {
 function showNavSmall() {
   smallNav.classList.toggle("nav-visible");
 }
-
-function hideNavSmallClick() {
-  for (let i = 0; i < smallNavList.length; i++) {
-    smallNavList[i].addEventListener("click", function () {
-      smallNav.classList.remove("nav-visible");
-    });
-  }
-}
-
 // --- Show small nav
 // --------- Main functions
 
@@ -295,6 +273,21 @@ function displayMessage() {
 // --------- Modules
 
 // Main -----
+// Popup ---
+for (let i = 0; i < triggerClosePopup.length; i++) {
+  triggerClosePopup[i].addEventListener("click", closePopup);
+}
+
+overlay.addEventListener("click", closePopup);
+
+document.addEventListener("keydown", function (event) {
+  console.log(event.key);
+  if (event.key === "Escape") {
+    closePopup();
+  }
+});
+// --- Popup
+
 // Sticky nav---
 const stickyNav = new Waypoint({
   element: document.querySelector(".js-nav-waypoint"),
@@ -314,7 +307,11 @@ const showNav = new Waypoint({
 // --- Show small nav
 
 // Hide small nav ---
-hideNavSmallClick();
+for (let i = 0; i < smallNavList.length; i++) {
+  smallNavList[i].addEventListener("click", function () {
+    smallNav.classList.remove("nav-visible");
+  });
+}
 // --- Hide small nav
 
 // Sliders ---

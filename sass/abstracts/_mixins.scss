@@ -11,28 +11,28 @@
   background-color: $color-quartenery;
 }
 
-// Responsive ---
-@mixin resSmall {
-  @media only screen and (max-width: 37.5em) {
-    @content;
-  } //600px
-}
+@mixin scrollTemplate {
+  // Scrollbar ---
+  overflow-y: scroll;
 
-@mixin resMedium {
-  @media only screen and (max-width: 56.25em) {
-    @content;
-  } //900px
-}
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /*Firefox*/
 
-@mixin resLarge {
-  @media only screen and (max-width: 75em) {
-    @content;
-  } //1200px
-}
+  /*Firefox*/
+  scrollbar-width: thin;
+  scrollbar-color: $color-tertiary $color-primary;
 
-@mixin resHuge {
-  @media only screen and (min-width: 112.5em) {
-    @content;
-  } //1800
+  /* Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: 0.55vw;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $color-primary;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-tertiary;
+  }
+  // --- Scrollbar
 }
-// --- Responsive
