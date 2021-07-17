@@ -1198,7 +1198,7 @@ img {
   font-weight: 200;
   font-size: 2rem;
   font-style: italic;
-  text-shadow: 0 0 1rem #5c636e;
+  text-shadow: 0 0 1rem #5c636e, 0 0 0.1rem #484f59;
 }
 
 @media only screen and (max-width: 62.5em) {
@@ -1610,7 +1610,7 @@ img {
 
 @media only screen and (max-width: 43.75em) {
   .header__nav {
-    padding: 1rem 2rem 0 2rem;
+    padding: 5rem 2rem 1rem 2rem;
   }
 }
 
@@ -1785,7 +1785,7 @@ img {
   object-position: left;
 }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 43.75em) {
   .slider__hero--1 {
     object-position: center;
   }
@@ -1944,6 +1944,9 @@ img {
   width: 100%;
   padding: 1.6rem 0.5rem;
   box-shadow: 0 0.1rem 0.5rem #484f59;
+  background-image: url("../img/bg-nav-small.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
   background-color: rgba(247, 247, 247, 0.97);
   opacity: 1;
   visibility: visible;
@@ -2414,7 +2417,7 @@ img {
   padding: 9rem 13rem;
   background-image: url("../img/bg-about.png");
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: center;
   margin-top: 5rem;
   font-family: "Montserrat", sans-serif;
 }
@@ -2448,7 +2451,7 @@ img {
   border-bottom: none;
   background-image: url("../img/bg-service.png");
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: center;
   background-color: #5c636e;
   color: #fff;
   font-family: "Montserrat", sans-serif;
@@ -2482,7 +2485,7 @@ img {
   border-top: none;
   background-image: url("../img/bg-client.png");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
   background-color: #6b7480;
   color: #fff;
   font-family: "Montserrat", sans-serif;
@@ -2512,6 +2515,9 @@ img {
   align-items: center;
   padding: 9rem 0 0 0;
   border-bottom: 2px solid #484f59;
+  background-image: url("../img/bg-art.png");
+  background-repeat: no-repeat;
+  background-position: top;
   background-color: #393e46;
   color: #fff;
   font-family: "Montserrat", sans-serif;
@@ -2521,6 +2527,9 @@ img {
   width: 100%;
   max-width: 190rem;
   padding: 13rem 13rem 8rem 13rem;
+  background-image: url("../img/bg-contact.png");
+  background-size: cover;
+  background-position: center;
   font-family: "Montserrat", sans-serif;
 }
 

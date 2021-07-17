@@ -29,7 +29,7 @@
   padding: 9rem 13rem;
   background-image: url("../img/bg-about.png");
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: center;
   margin-top: 5rem;
   font-family: "Montserrat", sans-serif;
 
@@ -57,7 +57,7 @@
   border-bottom: none;
   background-image: url("../img/bg-service.png");
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: center;
   background-color: $color-tertiary;
   color: $color-font-light;
   font-family: "Montserrat", sans-serif;
@@ -85,7 +85,7 @@
   border-top: none;
   background-image: url("../img/bg-client.png");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
   background-color: $color-tertiary-light;
   color: $color-font-light;
   font-family: "Montserrat", sans-serif;
@@ -109,9 +109,9 @@
   align-items: center;
   padding: 9rem 0 0 0;
   border-bottom: 2px solid $color-secondary-light;
-  // background-image: url("../img/bg-art.png");
-  // background-repeat: no-repeat;
-  // background-position: top right;
+  background-image: url("../img/bg-art.png");
+  background-repeat: no-repeat;
+  background-position: top;
   background-color: $color-secondary;
   color: $color-font-light;
   font-family: "Montserrat", sans-serif;
@@ -121,9 +121,9 @@
   width: 100%;
   max-width: 190rem;
   padding: 13rem 13rem 8rem 13rem;
-  // background-image: url("../img/bg-contact.png");
-  // background-repeat: no-repeat;
-  // background-position: top right;
+  background-image: url("../img/bg-contact.png");
+  background-size: cover;
+  background-position: center;
   font-family: "Montserrat", sans-serif;
 
   @media only screen and (max-width: $bp-largest) {

@@ -38,7 +38,7 @@
     padding: 1rem 2rem;
 
     @media only screen and (max-width: $bp-small) {
-      padding: 1rem 2rem 0 2rem;
+      padding: 5rem 2rem 1rem 2rem;
     }
 
     ul {
@@ -216,7 +216,7 @@
   &__hero {
     &--1 {
       object-position: left;
-      @media only screen and (max-width: $bp-smallest) {
+      @media only screen and (max-width: $bp-small) {
         object-position: center;
       }
     }
