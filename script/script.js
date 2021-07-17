@@ -297,14 +297,14 @@ const stickyNav = new Waypoint({
 });
 // --- Sticky nav
 
-// Show small nav ---
-const showNav = new Waypoint({
-  element: document.querySelector(".js-nav-waypoint"),
-  handler: function (direction) {
-    smallNav.classList.remove("nav-visible");
-  },
-});
-// --- Show small nav
+// // Show small nav ---
+// const showNav = new Waypoint({
+//   element: document.querySelector(".js-nav-waypoint"),
+//   handler: function (direction) {
+//     smallNav.classList.remove("nav-visible");
+//   },
+// });
+// // --- Show small nav
 
 // Hide small nav ---
 for (let i = 0; i < smallNavList.length; i++) {

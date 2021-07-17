@@ -785,7 +785,7 @@ img {
 
 .art__title {
   display: inline-block;
-  width: 12%;
+  width: 13%;
   margin: 0 auto;
 }
 
@@ -1935,48 +1935,58 @@ img {
 }
 
 .nav__small {
+  display: none;
   align-items: center;
   position: fixed;
-  top: -5.5rem;
+  top: 0;
+  right: -100%;
+  height: 100%;
   width: 100%;
   padding: 1.6rem 0.5rem;
   box-shadow: 0 0.1rem 0.5rem #484f59;
   background-color: rgba(247, 247, 247, 0.97);
   opacity: 1;
   visibility: visible;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Barlow", sans-serif;
   transition: all 0.1s;
   z-index: 7;
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .nav__small {
-    display: none;
+    display: block;
   }
 }
 
 .nav__small-list {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 40%;
+  margin: 15% 0;
   list-style: none;
 }
 
+.nav__small-item {
+  width: 100%;
+}
+
 .nav__small-link:link, .nav__small-link:visited {
+  display: block;
   padding: 1.3rem 0.8rem;
-  margin: 0 1rem;
-  border-bottom: 3px solid transparent;
+  margin: 0;
   overflow: hidden;
   color: #000;
-  font-size: 1.5rem;
+  font-size: 4rem;
   letter-spacing: 0.2rem;
   text-decoration: none;
+  text-align: center;
   transition: all 0.2s;
 }
 
 .nav__small-link:hover, .nav__small-link:active {
-  border-bottom: 3px solid #f8b500;
-  box-shadow: inset 0 -2rem 4.5rem -4rem #f8b500;
+  color: #f8b500;
 }
 
 .sticky-nav {
@@ -1984,7 +1994,7 @@ img {
 }
 
 .nav-visible {
-  top: 5.5rem;
+  right: 0;
 }
 
 .service__title {
@@ -2402,6 +2412,9 @@ img {
 .about {
   max-width: 190rem;
   padding: 9rem 13rem;
+  background-image: url("../img/bg-about.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
   margin-top: 5rem;
   font-family: "Montserrat", sans-serif;
 }
@@ -2433,6 +2446,9 @@ img {
   padding: 9rem 10rem 10rem 10rem;
   border: 2px solid #4d525c;
   border-bottom: none;
+  background-image: url("../img/bg-service.png");
+  background-repeat: no-repeat;
+  background-position: top right;
   background-color: #5c636e;
   color: #fff;
   font-family: "Montserrat", sans-serif;
@@ -2464,6 +2480,9 @@ img {
   padding: 6rem 10rem 8rem 10rem;
   border: 2px solid #4d525c;
   border-top: none;
+  background-image: url("../img/bg-client.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
   background-color: #6b7480;
   color: #fff;
   font-family: "Montserrat", sans-serif;
