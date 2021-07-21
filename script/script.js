@@ -100,6 +100,12 @@ function slideHead(position) {
 
 // Service auto slider ---
 function showSlidesService() {
+  serviceTransitionAdd();
+  setTimeout(showSlidesServiceNext, 500);
+}
+
+function showSlidesServiceNext() {
+  serviceTransitionRemove();
   removeService();
   removeAnim();
 
@@ -120,6 +126,12 @@ function showSlidesService() {
 function slideService(activeNumber) {
   clearTimeout(timerDesign);
 
+  serviceTransitionAdd();
+  setTimeout(slideServiceNext, 500, activeNumber);
+}
+
+function slideServiceNext(activeNumber) {
+  serviceTransitionRemove();
   removeService();
   removeAnim();
 
@@ -149,7 +161,7 @@ function showSlidesMessage() {
     "client__message--slided"
   );
 
-  timerMessage = setTimeout(showSlidesMessage, 12000);
+  timerMessage = setTimeout(showSlidesMessage, 17000);
 }
 // -- Message auto slider
 
@@ -166,7 +178,7 @@ function slideMessage(position) {
   removeMessage();
   displayMessage();
 
-  timerMessage = setTimeout(showSlidesMessage, 12000);
+  timerMessage = setTimeout(showSlidesMessage, 17000);
 }
 // --- Message manual slider
 // -------- Slider
@@ -239,6 +251,22 @@ function removeService() {
 }
 // --- Remove service
 
+// Service Transition ---
+function serviceTransitionAdd() {
+  for (i = 0; i < slideDesign.length; i++) {
+    slideDesignText[i].classList.add("slide-fade-out");
+    slideDesignImages[i].classList.add("slide-fade-out");
+  }
+}
+
+function serviceTransitionRemove() {
+  for (i = 0; i < slideDesign.length; i++) {
+    slideDesignText[i].classList.remove("slide-fade-out");
+    slideDesignImages[i].classList.remove("slide-fade-out");
+  }
+}
+// --- Service Transition
+
 // Remove animation ---
 function removeAnim() {
   progressService.classList.remove("progress-10s");
@@ -248,7 +276,6 @@ function removeAnim() {
 
 // Add animation ---
 function addAnim(animation) {
-  progressService.classList.add(animation);
   progressService.classList.add(animation);
 }
 // --- Add animation
@@ -281,7 +308,6 @@ for (let i = 0; i < triggerClosePopup.length; i++) {
 overlay.addEventListener("click", closePopup);
 
 document.addEventListener("keydown", function (event) {
-  console.log(event.key);
   if (event.key === "Escape") {
     closePopup();
   }

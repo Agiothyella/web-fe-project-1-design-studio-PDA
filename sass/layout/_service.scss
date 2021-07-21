@@ -341,7 +341,7 @@
   &__bar {
     grid-column: 1 / 2;
     width: 92.5%;
-    background-color: $color-tertiary-dark;
+    background-color: $color-tertiary-light;
 
     @media only screen and (max-width: $bp-medium) {
       grid-column: 1 / span 2;

@@ -1,18 +1,24 @@
 .slide-fade {
   animation-name: slide-fade;
-  animation-duration: 0.8s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.slide-fade-out {
+  animation-name: slide-fade-out;
+  animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
 }
 
 .progress-10s {
   animation-name: progress-animation;
-  animation-duration: 9.9s;
+  animation-duration: 10.4s;
   animation-timing-function: linear;
 }
 
 .progress-25s {
   animation-name: progress-animation;
-  animation-duration: 24.9s;
+  animation-duration: 25.4s;
   animation-timing-function: linear;
 }
 
@@ -34,6 +40,15 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes slide-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 

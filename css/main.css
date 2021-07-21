@@ -1,18 +1,24 @@
 .slide-fade {
   animation-name: slide-fade;
-  animation-duration: 0.8s;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.slide-fade-out {
+  animation-name: slide-fade-out;
+  animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
 }
 
 .progress-10s {
   animation-name: progress-animation;
-  animation-duration: 9.9s;
+  animation-duration: 10.4s;
   animation-timing-function: linear;
 }
 
 .progress-25s {
   animation-name: progress-animation;
-  animation-duration: 24.9s;
+  animation-duration: 25.4s;
   animation-timing-function: linear;
 }
 
@@ -34,6 +40,15 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes slide-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
@@ -1195,7 +1210,7 @@ img {
 
 .client__quote {
   font-family: "Barlow", sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 2rem;
   font-style: italic;
   text-shadow: 0 0 1rem #5c636e, 0 0 0.1rem #484f59;
@@ -1235,7 +1250,7 @@ img {
   display: block;
   margin-top: 0.3rem;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .contact__title {
@@ -2360,7 +2375,7 @@ img {
 .service__bar {
   grid-column: 1 / 2;
   width: 92.5%;
-  background-color: #4d525c;
+  background-color: #6b7480;
 }
 
 @media only screen and (max-width: 52.8125em) {
