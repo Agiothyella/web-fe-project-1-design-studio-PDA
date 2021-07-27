@@ -675,6 +675,7 @@ img {
   border: none;
   fill: #f7f7f7;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .c-search-bar__button:focus {
