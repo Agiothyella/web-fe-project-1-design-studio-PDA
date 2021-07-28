@@ -157,10 +157,5 @@
     width: 100%;
     background-color: rgba($color-secondary-dark, 0.98);
     z-index: 9;
-
-    @supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0)) {
-      backdrop-filter: blur(10px);
-      background-color: rgba($color-dark-1, 0.3);
-    }
   }
 }

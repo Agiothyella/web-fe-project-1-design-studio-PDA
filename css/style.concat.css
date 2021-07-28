@@ -467,10 +467,6 @@ img {
     width: 100%;
     background-color: rgba(42, 45, 51, 0.98);
     z-index: 9; }
-    @supports (backdrop-filter: blur(0)) or (-webkit-backdrop-filter: blur(0)) {
-      .popup__overlay {
-        backdrop-filter: blur(10px);
-        background-color: rgba(0, 0, 0, 0.3); } }
 
 .c-search-bar {
   display: flex;
@@ -1676,7 +1672,8 @@ img {
 
 .header {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  background-image: url("../img/bg-header.png"); }
 
 .nav {
   display: flex;

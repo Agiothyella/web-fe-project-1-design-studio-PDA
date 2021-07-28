@@ -7,8 +7,13 @@
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "concat:css": "concat -o css/style.concat.css css/style.comp.css",
     "prefix:css": "postcss css/style.concat.css --use autoprefixer -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.min.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+    "compress:css": "csso css/style.prefix.css --output css/style.min.css",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
+    "concat:js": "concat -o script/script.concat.js script/main.js",
+    "compress:js": "uglifyjs script/script.concat.js --compress --output script/script.min.js",
+    "build:js": "npm-run-all concat:js compress:js",
+    "compress:html": "html-minifier index-dev.html --output index.html --case-sensitive --collapse-whitespace --decode-entities --remove-comments",
+    "build:all": "npm-run-all build:css build:js compress:html"
   },
   "browserslist": "last 10 versions",
   "author": "Agiothyella",
@@ -16,9 +21,12 @@
   "devDependencies": {
     "autoprefixer": "^10.2.6",
     "concat": "^1.0.3",
+    "csso-cli": "^3.0.0",
+    "html-minifier": "^4.0.0",
     "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.5",
-    "postcss-cli": "^8.3.1"
+    "postcss-cli": "^8.3.1",
+    "uglify-js": "^3.14.1"
   }
 }

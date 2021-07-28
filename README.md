@@ -1,11 +1,12 @@
 # Agiothyella Design Studio webpage
+
 Landing page for Agiothyella Design Studio
 
 This webpage was designed and developed by me, Agiothyella.
 This webpage is hosted on github as a showcase for my portofolio. Please do not copy/duplicate whole/parts of my code.
 
-
 Creator of the images used (in order of appearances):
+
 - Header: Unknown, Ferdinand Ladera, Unknown, Jonathan Kuo
 - About: Unknown
 - Service Environment: Feng Zhu, Prince of Persia 2008 Concept Art, oscarvisual
@@ -16,7 +17,7 @@ Creator of the images used (in order of appearances):
 - Gallery Column 1: Assassins Creed Concept Art, Svetlin Velinov for "Magic the Gathering", Encho Enchev, Chenthooran Nambiarooran, Unknown, Unknown, danarune
 - Gallery Column 2: Paul Tobin, nixell cho, Gabe Gonzalez, Assassins Creed Unity Concept Art
 - Gallery Column 3: Alp Allen Altiner, Hamish Frater, Yu Chen Hong, Tatiana Yamshanova, Bobby Weissenberg
-- Background Image: Aurélie Bouquet (About), OKAZU (Service), wikimedia commons (Service), MarcWasHere (Clients), jadrienC (Contact), Akihiko Yoshida for "Bravely Default" (Small menu)
+- Background Image: MelbuFrama (Header), Aurélie Bouquet (About), OKAZU (Service), wikimedia commons (Service), MarcWasHere (Clients), jadrienC (Contact), Akihiko Yoshida for "Bravely Default" (Small menu)
 - Pop-up: Unknown (Landscape), Jesse Van Dijk (Potrait)
 
 No copyright infringement is intended. I do not own nor claim any of the Image used in this webpage, as it only served as placeholder.
