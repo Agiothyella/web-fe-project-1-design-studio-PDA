@@ -123,11 +123,20 @@ function showSlidesServiceNext() {
 // --- Service auto slider
 
 //  Service manual slider ---
-function slideService(activeNumber) {
-  clearTimeout(timerDesign);
+let pauseService = 0;
 
-  serviceTransitionAdd();
-  setTimeout(slideServiceNext, 500, activeNumber);
+function slideService(activeNumber) {
+  if (!pauseService) {
+    pauseService = 1;
+    clearTimeout(timerDesign);
+
+    serviceTransitionAdd();
+    setTimeout(slideServiceNext, 500, activeNumber);
+
+    setTimeout(function () {
+      pauseService = 0;
+    }, 500);
+  }
 }
 
 function slideServiceNext(activeNumber) {
@@ -166,19 +175,28 @@ function showSlidesMessage() {
 // -- Message auto slider
 
 // Message manual slider ---
+let pauseMessage = 0;
+
 function slideMessage(position) {
-  clearTimeout(timerMessage);
+  if (!pauseMessage) {
+    pauseMessage = 1;
+    clearTimeout(timerMessage);
 
-  indexMessage += position;
-  indexMessageNext += position;
+    indexMessage += position;
+    indexMessageNext += position;
 
-  indexMessageNext = checkSlides(indexMessageNext, slideClientMessage);
-  indexMessage = checkSlides(indexMessage, slideClientMessage);
+    indexMessageNext = checkSlides(indexMessageNext, slideClientMessage);
+    indexMessage = checkSlides(indexMessage, slideClientMessage);
 
-  removeMessage();
-  displayMessage();
+    removeMessage();
+    displayMessage();
 
-  timerMessage = setTimeout(showSlidesMessage, 17000);
+    timerMessage = setTimeout(showSlidesMessage, 17000);
+
+    setTimeout(function () {
+      pauseMessage = 0;
+    }, 2000);
+  }
 }
 // --- Message manual slider
 // -------- Slider
