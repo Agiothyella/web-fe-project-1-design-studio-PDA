@@ -1684,8 +1684,8 @@ img {
   left: 0;
   width: 100%;
   padding: 0 2rem;
-  box-shadow: 0 0.1rem 0.5rem #484f59;
-  background-color: rgba(247, 247, 247, 0.97);
+  border-bottom: 1px solid #6b7480;
+  background-color: #f7f7f7;
   letter-spacing: 0.4rem;
   font-family: "Montserrat", sans-serif; }
 

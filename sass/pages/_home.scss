@@ -19,8 +19,8 @@
   left: 0;
   width: 100%;
   padding: 0 2rem;
-  box-shadow: 0 0.1rem 0.5rem $color-secondary-light;
-  background-color: rgba($color-primary, 0.97);
+  border-bottom: 1px solid $color-tertiary-light;
+  background-color: $color-primary;
   letter-spacing: 0.4rem;
   font-family: "Montserrat", sans-serif;
 }
