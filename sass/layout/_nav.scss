@@ -1,5 +1,6 @@
 .nav {
-  top: -8.5rem;
+  opacity: 0;
+  visibility: hidden;
   z-index: 8;
   transition: all 0.1s;
 
@@ -214,7 +215,13 @@
 }
 
 .sticky-nav {
-  top: 0;
+  opacity: 0.99;
+  visibility: visible;
+  background-image: linear-gradient(
+    to top left,
+    $color-primary,
+    $color-light-2
+  ) !important;
 }
 
 .nav-visible {

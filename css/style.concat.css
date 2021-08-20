@@ -1286,7 +1286,8 @@ img {
       object-position: center; } }
 
 .nav {
-  top: -8.5rem;
+  opacity: 0;
+  visibility: hidden;
   z-index: 8;
   transition: all 0.1s; }
   .nav__title:link, .nav__title:visited {
@@ -1420,7 +1421,9 @@ img {
     color: #f8b500; }
 
 .sticky-nav {
-  top: 0; }
+  opacity: 0.99;
+  visibility: visible;
+  background-image: linear-gradient(to top left, #f7f7f7, #f0f0f0) !important; }
 
 .nav-visible {
   right: 0; }
@@ -1685,7 +1688,6 @@ img {
   width: 100%;
   padding: 0 2rem;
   border-bottom: 1px solid #6b7480;
-  background-color: #f7f7f7;
   letter-spacing: 0.4rem;
   font-family: "Montserrat", sans-serif; }
 
