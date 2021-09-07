@@ -192,6 +192,10 @@ img {
 .u-unselectable {
   user-select: none !important; }
 
+.u-invisible {
+  opacity: 0 !important;
+  visibility: hidden !important; }
+
 .u-visible {
   opacity: 1 !important;
   visibility: visible !important; }
@@ -465,7 +469,7 @@ img {
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: rgba(42, 45, 51, 0.98);
+    background-color: rgba(15, 15, 15, 0.98);
     z-index: 9; }
 
 .c-search-bar {
@@ -1149,7 +1153,7 @@ img {
   padding: 1rem 2rem; }
   @media only screen and (max-width: 43.75em) {
     .header__nav {
-      padding: 5rem 2rem 1rem 2rem; } }
+      margin: 4rem 0 0 0; } }
   @media only screen and (max-width: 43.75em) {
     .header__nav ul {
       width: 100%;
@@ -1289,7 +1293,7 @@ img {
   opacity: 0;
   visibility: hidden;
   z-index: 8;
-  transition: all 0.1s; }
+  transition: all 0s; }
   .nav__title:link, .nav__title:visited {
     padding: 1.5rem 2rem;
     overflow: hidden;
@@ -1316,22 +1320,13 @@ img {
     .nav__title:link, .nav__title:visited {
       display: none; } }
   .nav__logo {
-    margin: 0 2rem;
+    margin: 0.5rem 2rem;
     display: none; }
     @media only screen and (max-width: 43.75em) {
       .nav__logo--wide {
         display: block; } }
-    @media only screen and (max-width: 37.5em) {
-      .nav__logo--wide {
-        display: none; } }
     .nav__logo--wide img {
       height: 4.6rem;
-      width: auto; }
-    @media only screen and (max-width: 37.5em) {
-      .nav__logo--small {
-        display: block; } }
-    .nav__logo--small img {
-      height: 5.372rem;
       width: auto; }
   .nav__list {
     display: flex;
@@ -1343,8 +1338,7 @@ img {
     .nav__list--small {
       display: flex; }
   .nav__link:link, .nav__link:visited {
-    padding: 1.3rem 0.5rem;
-    margin: 0 1rem;
+    padding: 1.3rem 1.5rem;
     border-bottom: 3px solid transparent;
     overflow: hidden;
     color: #000;
@@ -1353,7 +1347,8 @@ img {
     transition: all 0.2s; }
   .nav__link:hover, .nav__link:active {
     border-bottom: 3px solid #f8b500;
-    box-shadow: inset 0 -2rem 4.5rem -4rem #f8b500; }
+    box-shadow: inset 0 -2rem 4.5rem -4rem #f8b500;
+    box-shadow: #f8b500 0px -10px 20px -20px inset; }
   @media only screen and (max-width: 52.8125em) {
     .nav__link:link, .nav__link:visited {
       letter-spacing: 0.25rem; } }
@@ -1421,12 +1416,11 @@ img {
     color: #f8b500; }
 
 .sticky-nav {
-  opacity: 0.99;
-  visibility: visible;
-  background-image: linear-gradient(to top left, #f7f7f7, #f0f0f0) !important; }
+  opacity: 1;
+  visibility: visible; }
 
-.nav-visible {
-  right: 0; }
+.nav-white-bg {
+  background-color: #f7f7f7; }
 
 .service__title {
   display: inline-block;
@@ -1687,7 +1681,6 @@ img {
   left: 0;
   width: 100%;
   padding: 0 2rem;
-  border-bottom: 1px solid #6b7480;
   letter-spacing: 0.4rem;
   font-family: "Montserrat", sans-serif; }
 

@@ -2,7 +2,8 @@
   opacity: 0;
   visibility: hidden;
   z-index: 8;
-  transition: all 0.1s;
+  transition: all 0s;
+  // transition: all 0.1s, opacity 0s, visibility 0s;
 
   &__title {
     &:link,
@@ -56,7 +57,7 @@
   }
 
   &__logo {
-    margin: 0 2rem;
+    margin: 0.5rem 2rem;
     display: none;
 
     &--wide {
@@ -64,23 +65,8 @@
         display: block;
       }
 
-      @media only screen and (max-width: $bp-smallest) {
-        display: none;
-      }
-
       img {
         height: 4.6rem;
-        width: auto;
-      }
-    }
-
-    &--small {
-      @media only screen and (max-width: $bp-smallest) {
-        display: block;
-      }
-
-      img {
-        height: 5.372rem;
         width: auto;
       }
     }
@@ -103,8 +89,7 @@
   &__link {
     &:link,
     &:visited {
-      padding: 1.3rem 0.5rem;
-      margin: 0 1rem;
+      padding: 1.3rem 1.5rem;
       border-bottom: 3px solid transparent;
       overflow: hidden;
       color: $color-font-dark;
@@ -117,6 +102,7 @@
     &:active {
       border-bottom: 3px solid $color-quartenery;
       box-shadow: inset 0 -2rem 4.5rem -4rem $color-quartenery;
+      box-shadow: $color-quartenery 0px -10px 20px -20px inset;
     }
 
     @media only screen and (max-width: $bp-medium) {
@@ -215,15 +201,15 @@
 }
 
 .sticky-nav {
-  opacity: 0.99;
+  opacity: 1;
   visibility: visible;
-  background-image: linear-gradient(
-    to top left,
-    $color-primary,
-    $color-light-2
-  ) !important;
+  // background-image: linear-gradient(
+  //   to top left,
+  //   $color-primary,
+  //   $color-light-2
+  // ) !important;
 }
 
-.nav-visible {
-  right: 0;
+.nav-white-bg {
+  background-color: $color-primary;
 }

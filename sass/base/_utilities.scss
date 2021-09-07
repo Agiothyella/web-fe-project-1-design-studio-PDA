@@ -44,6 +44,11 @@
   user-select: none !important;
 }
 
+.u-invisible {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
 .u-visible {
   opacity: 1 !important;
   visibility: visible !important;

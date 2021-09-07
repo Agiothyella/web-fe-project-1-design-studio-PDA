@@ -36,6 +36,7 @@ let timerHead, timerDesign, timerMessage;
 const navigation = document.querySelector(".nav");
 const smallNav = document.querySelector(".nav__small");
 const smallNavList = document.querySelectorAll(".nav__small-item");
+const headerNav = document.querySelector(".header__nav");
 // --- Small nav
 // ------- Variable
 
@@ -337,7 +338,16 @@ const stickyNav = new Waypoint({
   element: document.querySelector(".js-nav-waypoint"),
   handler: function (direction) {
     navigation.classList.toggle("sticky-nav");
+    headerNav.classList.toggle("u-invisible");
   },
+});
+
+const stickyNavBg = new Waypoint({
+  element: document.querySelector(".js-nav-waypoint"),
+  handler: function (direction) {
+    navigation.classList.toggle("nav-white-bg");
+  },
+  offset: -50,
 });
 // --- Sticky nav
 
