@@ -19,6 +19,7 @@ const slideDesignText = document.getElementsByClassName("service__text");
 const slideDesignImages = document.getElementsByClassName("service__images");
 const slideClientMessage = document.getElementsByClassName("client__message");
 
+const progressWrapper = document.querySelector(".service__wrapper");
 const progressService = document.querySelector(".service__progress");
 
 let slideDot = document.getElementsByClassName("slider__dot");
@@ -275,6 +276,7 @@ function serviceTransitionAdd() {
   for (i = 0; i < slideDesign.length; i++) {
     slideDesignText[i].classList.add("slide-fade-out");
     slideDesignImages[i].classList.add("slide-fade-out");
+    progressWrapper.classList.add("slide-fade-out");
   }
 }
 
@@ -282,6 +284,7 @@ function serviceTransitionRemove() {
   for (i = 0; i < slideDesign.length; i++) {
     slideDesignText[i].classList.remove("slide-fade-out");
     slideDesignImages[i].classList.remove("slide-fade-out");
+    progressWrapper.classList.remove("slide-fade-out");
   }
 }
 // --- Service Transition
