@@ -128,6 +128,8 @@ function showSlidesServiceNext() {
 let pauseService = 0;
 
 function slideService(activeNumber) {
+  progressWrapper.classList.add("slide-fade-out");
+
   if (!pauseService) {
     pauseService = 1;
     clearTimeout(timerDesign);
@@ -197,7 +199,7 @@ function slideMessage(position) {
 
     setTimeout(function () {
       pauseMessage = 0;
-    }, 2000);
+    }, 1000);
   }
 }
 // --- Message manual slider
@@ -276,7 +278,6 @@ function serviceTransitionAdd() {
   for (i = 0; i < slideDesign.length; i++) {
     slideDesignText[i].classList.add("slide-fade-out");
     slideDesignImages[i].classList.add("slide-fade-out");
-    progressWrapper.classList.add("slide-fade-out");
   }
 }
 

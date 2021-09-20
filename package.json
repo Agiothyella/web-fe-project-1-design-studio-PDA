@@ -12,7 +12,7 @@
     "concat:js": "concat -o script/script.concat.js script/main.js",
     "compress:js": "uglifyjs script/script.concat.js --compress --output script/script.min.js",
     "build:js": "npm-run-all concat:js compress:js",
-    "compress:html": "html-minifier index-dev.html --output index.html --case-sensitive --collapse-whitespace --decode-entities --remove-comments",
+    "compress:html": "html-minifier index.html --output index.html --case-sensitive --collapse-whitespace --decode-entities --remove-comments",
     "build:all": "npm-run-all build:css build:js compress:html"
   },
   "browserslist": "last 10 versions",
