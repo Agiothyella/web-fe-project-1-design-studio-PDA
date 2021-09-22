@@ -1364,7 +1364,7 @@ img {
     color: #4d525c;
     font-family: "Barlow", sans-serif;
     transition: all 0.2s; }
-    .nav__btn:hover {
+    .nav__btn:hover, .nav__btn:active {
       color: #f8b500; }
     @media only screen and (max-width: 37.5em) {
       .nav__btn {
@@ -1387,10 +1387,24 @@ img {
     visibility: visible;
     font-family: "Barlow", sans-serif;
     transition: all 0.1s;
-    z-index: 7; }
+    z-index: 15; }
     @media only screen and (max-width: 37.5em) {
       .nav__small {
         display: block; } }
+    .nav__small__close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 3rem;
+      cursor: pointer;
+      font-size: 4.5rem;
+      padding: 0 1rem;
+      letter-spacing: 0;
+      color: #4d525c;
+      font-family: "Barlow", sans-serif;
+      transition: all 0.2s; }
+      .nav__small__close:hover, .nav__small__close:active {
+        color: #f8b500; }
   .nav__small-list {
     display: flex;
     flex-direction: column;
@@ -1421,6 +1435,9 @@ img {
 
 .nav-white-bg {
   background-color: #f7f7f7; }
+
+.nav-visible {
+  right: 0; }
 
 .service__title {
   display: inline-block;

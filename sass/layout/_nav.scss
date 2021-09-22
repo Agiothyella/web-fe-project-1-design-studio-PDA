@@ -130,7 +130,8 @@
     font-family: "Barlow", sans-serif;
     transition: all 0.2s;
 
-    &:hover {
+    &:hover,
+    &:active {
       color: $color-quartenery;
     }
 
@@ -157,10 +158,29 @@
     visibility: visible;
     font-family: "Barlow", sans-serif;
     transition: all 0.1s;
-    z-index: 7;
+    z-index: 15;
 
     @media only screen and (max-width: $bp-smallest) {
       display: block;
+    }
+
+    &__close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 3rem;
+      cursor: pointer;
+      font-size: 4.5rem;
+      padding: 0 1rem;
+      letter-spacing: 0;
+      color: $color-tertiary-dark;
+      font-family: "Barlow", sans-serif;
+      transition: all 0.2s;
+
+      &:hover,
+      &:active {
+        color: $color-quartenery;
+      }
     }
   }
 
@@ -203,13 +223,12 @@
 .sticky-nav {
   opacity: 1;
   visibility: visible;
-  // background-image: linear-gradient(
-  //   to top left,
-  //   $color-primary,
-  //   $color-light-2
-  // ) !important;
 }
 
 .nav-white-bg {
   background-color: $color-primary;
+}
+
+.nav-visible {
+  right: 0;
 }

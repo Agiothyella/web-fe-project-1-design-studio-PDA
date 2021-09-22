@@ -36,6 +36,7 @@ let timerHead, timerDesign, timerMessage;
 // Small nav ---
 const navigation = document.querySelector(".nav");
 const smallNav = document.querySelector(".nav__small");
+const smallNavClose = document.querySelector(".nav__small__close");
 const smallNavList = document.querySelectorAll(".nav__small-item");
 const headerNav = document.querySelector(".header__nav");
 // --- Small nav
@@ -340,7 +341,7 @@ document.addEventListener("keydown", function (event) {
 // Sticky nav---
 const stickyNav = new Waypoint({
   element: document.querySelector(".js-nav-waypoint"),
-  handler: function (direction) {
+  handler: function () {
     navigation.classList.toggle("sticky-nav");
     headerNav.classList.toggle("u-invisible");
   },
@@ -348,7 +349,7 @@ const stickyNav = new Waypoint({
 
 const stickyNavBg = new Waypoint({
   element: document.querySelector(".js-nav-waypoint"),
-  handler: function (direction) {
+  handler: function () {
     navigation.classList.toggle("nav-white-bg");
   },
   offset: -50,
@@ -370,6 +371,10 @@ for (let i = 0; i < smallNavList.length; i++) {
     smallNav.classList.remove("nav-visible");
   });
 }
+
+smallNavClose.addEventListener("click", function () {
+  smallNav.classList.remove("nav-visible");
+});
 // --- Hide small nav
 
 // Sliders ---
