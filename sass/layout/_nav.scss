@@ -90,7 +90,7 @@
     &:link,
     &:visited {
       padding: 1.3rem 1.5rem;
-      border-bottom: 3px solid transparent;
+      border-top: 3px solid transparent;
       overflow: hidden;
       color: $color-font-dark;
       font-size: 1.5rem;
@@ -100,9 +100,9 @@
 
     &:hover,
     &:active {
-      border-bottom: 3px solid $color-quartenery;
-      box-shadow: inset 0 -2rem 4.5rem -4rem $color-quartenery;
-      box-shadow: $color-quartenery 0px -10px 20px -20px inset;
+      border-top: 3px solid $color-quartenery;
+      box-shadow: inset 0 2rem 4.5rem -4rem $color-quartenery,
+        $color-quartenery 0px 10px 20px -20px inset;
     }
 
     @media only screen and (max-width: $bp-medium) {
