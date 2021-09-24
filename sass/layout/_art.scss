@@ -113,12 +113,10 @@
       0 0 0.5rem $color-primary, 0 0 0.5rem $color-primary;
     transition: all 0.25s;
 
-    @media only screen and (max-width: $bp-medium) {
-      font-size: 1.8rem;
-    }
-
-    @media only screen and (max-width: $bp-small) {
-      font-size: 1.7rem;
+    @media only screen and (hover: none) {
+      opacity: 1;
+      visibility: visible;
+      border-bottom: 2px solid transparent;
     }
   }
 
@@ -180,7 +178,7 @@
 
       input {
         @media only screen and (max-width: $bp-smallest) {
-          font-size: 1.3rem;
+          font-size: 1.4rem;
         }
       }
     }

@@ -38,4 +38,8 @@
 .t-header-4 {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 2rem;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 2.2rem;
+  }
 }

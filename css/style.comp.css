@@ -149,6 +149,9 @@ img {
 .t-header-4 {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 2rem; }
+  @media only screen and (max-width: 62.5em) {
+    .t-header-4 {
+      font-size: 2.2rem; } }
 
 .u-center-text {
   text-align: center !important; }
@@ -219,6 +222,10 @@ img {
   font-weight: 500;
   text-decoration: none;
   transition: all 0.2s; }
+  @media only screen and (max-width: 52.8125em), only screen and (hover: none) {
+    .btn:link, .btn:visited {
+      background-color: #f8b500;
+      color: #fff; } }
 
 .btn:hover {
   box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
@@ -262,6 +269,9 @@ img {
   font-size: 0.9rem;
   text-decoration: none;
   transition: all 0.2s; }
+  @media only screen and (max-width: 62.5em) {
+    .btn-plain:link, .btn-plain:visited {
+      font-size: 1.2rem; } }
 
 .btn-plain:hover, .btn-plain:active {
   color: #f8b500; }
@@ -669,12 +679,11 @@ img {
   font-weight: 600;
   text-shadow: 0 0 0.2rem #f8b500, 0 0 0.5rem #f7f7f7, 0 0 0.5rem #f7f7f7, 0 0 0.5rem #f7f7f7;
   transition: all 0.25s; }
-  @media only screen and (max-width: 52.8125em) {
+  @media only screen and (hover: none) {
     .art__caption {
-      font-size: 1.8rem; } }
-  @media only screen and (max-width: 43.75em) {
-    .art__caption {
-      font-size: 1.7rem; } }
+      opacity: 1;
+      visibility: visible;
+      border-bottom: 2px solid transparent; } }
 
 .art__highlight {
   position: absolute;
@@ -721,7 +730,7 @@ img {
       width: auto; } }
   @media only screen and (max-width: 37.5em) {
     .art__nav form input {
-      font-size: 1.3rem; } }
+      font-size: 1.4rem; } }
 
 .art__blog {
   justify-self: start; }
@@ -1381,7 +1390,7 @@ img {
     background-image: url("../img/bg-nav-small.png");
     background-repeat: no-repeat;
     background-position: bottom;
-    background-color: rgba(247, 247, 247, 0.97);
+    background-color: #f7f7f7;
     opacity: 1;
     visibility: visible;
     font-family: "Barlow", sans-serif;
