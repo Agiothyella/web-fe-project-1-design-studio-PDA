@@ -102,7 +102,7 @@ html {
 
 body {
   background-color: #f7f7f7;
-  color: #000; }
+  color: #191919; }
 
 img {
   font-size: 1.2rem;
@@ -562,7 +562,8 @@ img {
   flex-direction: column;
   gap: 4rem;
   text-align: justify;
-  line-height: 3rem; }
+  line-height: 3rem;
+  color: #1f1f1f; }
 
 .about__text {
   font-size: 1.8rem; }
@@ -1018,7 +1019,7 @@ img {
   order: 2;
   display: inline-block; }
   .contact__name:link, .contact__name:visited {
-    color: #000;
+    color: #191919;
     font-size: 1.4rem;
     text-decoration: none;
     transition: color 0.2s; }
@@ -1179,7 +1180,7 @@ img {
   margin: 0 1rem;
   border-bottom: 2px solid transparent;
   overflow: hidden;
-  color: #000;
+  color: #191919;
   font-size: 1.5rem;
   text-decoration: none;
   transition: all 0.2s; }
@@ -1309,13 +1310,13 @@ img {
     color: transparent;
     font-size: 1.5rem;
     text-decoration: none;
-    background: linear-gradient(to right, #000 0, #f8b500 10%, #000 20%);
+    background: linear-gradient(to right, #191919 0, #f8b500 10%, #191919 20%);
     background-position: -3.5rem;
     background-clip: text; }
     @supports (not (background-clip: text)) or (not (-webkit-background-clip: text)) {
       .nav__title:link, .nav__title:visited {
         background-image: none;
-        color: #000; } }
+        color: #191919; } }
   .nav__title:hover, .nav__title:active {
     animation: shine 3s infinite linear;
     animation-fill-mode: forwards; }
@@ -1350,7 +1351,7 @@ img {
     padding: 1.3rem 1.5rem;
     border-top: 3px solid transparent;
     overflow: hidden;
-    color: #000;
+    color: #191919;
     font-size: 1.5rem;
     text-decoration: none;
     transition: all 0.2s; }
@@ -1428,7 +1429,7 @@ img {
     padding: 1.3rem 0.8rem;
     margin: 0;
     overflow: hidden;
-    color: #000;
+    color: #191919;
     font-size: 4rem;
     letter-spacing: 0.2rem;
     text-decoration: none;
