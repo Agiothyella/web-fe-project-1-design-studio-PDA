@@ -4,9 +4,9 @@
   padding: 0 5rem;
   color: $color-highlight;
   font-family: "Barlow Semi Condensed", sans-serif;
-  letter-spacing: 0.5rem;
-  font-size: 7.5rem;
-  font-weight: bolder;
+  letter-spacing: 2px;
+  font-size: 8rem;
+  font-weight: 500;
   text-shadow: 0 0 1rem $color-primary, 0.2rem 0.2rem 2rem $color-primary;
 
   &::after {
@@ -23,10 +23,14 @@
   color: $color-highlight;
   margin-right: -1.5rem;
   font-family: "Barlow Semi Condensed", sans-serif;
-  font-size: 3rem;
-  letter-spacing: 1.5rem;
-  font-weight: 400;
+  font-size: 4rem;
+  letter-spacing: 12px;
+  font-weight: 300;
   text-shadow: 0 0 1rem $color-primary, 0.2rem 0.2rem 2rem $color-primary;
+
+  @media only screen and (max-width: $bp-smallest) {
+    letter-spacing: 10px;
+  }
 }
 
 .t-header-3 {
@@ -38,8 +42,35 @@
 .t-header-4 {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 2rem;
+  text-transform: uppercase;
 
   @media only screen and (max-width: $bp-large) {
     font-size: 2.2rem;
+  }
+}
+
+.t-header-bold {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+
+  letter-spacing: -1px;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 4.5rem;
+  }
+}
+
+.t-header-semi-bold {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 2.3rem;
   }
 }

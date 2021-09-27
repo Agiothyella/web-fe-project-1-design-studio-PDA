@@ -2,7 +2,7 @@
   opacity: 0;
   visibility: hidden;
   z-index: 8;
-  transition: all 0s;
+  transition: all 0.1s;
   // transition: all 0.1s, opacity 0s, visibility 0s;
 
   &__title {
@@ -93,7 +93,7 @@
       border-top: 3px solid transparent;
       overflow: hidden;
       color: $color-font-dark;
-      font-size: 1.5rem;
+      font-size: 1.55rem;
       text-decoration: none;
       transition: all 0.2s;
     }

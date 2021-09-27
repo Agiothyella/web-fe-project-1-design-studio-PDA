@@ -70,6 +70,7 @@
   }
 
   &__message-container {
+    position: relative;
     display: flex;
     align-items: center;
     column-gap: 6rem;
@@ -196,6 +197,12 @@
         font-size: 2rem;
       }
     }
+
+    &::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
   }
 
   &__name {
@@ -211,5 +218,10 @@
       font-size: 1.4rem;
       font-weight: 600;
     }
+  }
+
+  &__btn {
+    display: inline-block;
+    margin: 2rem 0 0 0;
   }
 }

@@ -104,7 +104,7 @@ function slideHead(position) {
 // Service auto slider ---
 function showSlidesService() {
   serviceTransitionAdd();
-  setTimeout(showSlidesServiceNext, 500);
+  setTimeout(showSlidesServiceNext, 300);
 }
 
 function showSlidesServiceNext() {
@@ -136,11 +136,11 @@ function slideService(activeNumber) {
     clearTimeout(timerDesign);
 
     serviceTransitionAdd();
-    setTimeout(slideServiceNext, 500, activeNumber);
+    setTimeout(slideServiceNext, 300, activeNumber);
 
     setTimeout(function () {
       pauseService = 0;
-    }, 500);
+    }, 300);
   }
 }
 
@@ -344,26 +344,11 @@ const stickyNav = new Waypoint({
   handler: function () {
     navigation.classList.toggle("sticky-nav");
     headerNav.classList.toggle("u-invisible");
-  },
-});
-
-const stickyNavBg = new Waypoint({
-  element: document.querySelector(".js-nav-waypoint"),
-  handler: function () {
     navigation.classList.toggle("nav-white-bg");
   },
-  offset: -50,
+  offset: 1,
 });
 // --- Sticky nav
-
-// // Show small nav ---
-// const showNav = new Waypoint({
-//   element: document.querySelector(".js-nav-waypoint"),
-//   handler: function (direction) {
-//     smallNav.classList.remove("nav-visible");
-//   },
-// });
-// // --- Show small nav
 
 // Hide small nav ---
 for (let i = 0; i < smallNavList.length; i++) {
@@ -388,3 +373,19 @@ addShowListener(triggerShowPopupL, popupL);
 addShowListener(triggerShowPopupP, popupP);
 // --- Popup
 // ----- Main
+
+let prevScrollpos = window.pageYOffset || document.documentElement.scrollTop;
+function scrollNavHider() {
+  let currentScrollPos =
+    window.pageYOffset || document.documentElement.scrollTop;
+  if (prevScrollpos > currentScrollPos) {
+    navigation.style.top = "0";
+  } else {
+    navigation.style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+window.onscroll = function () {
+  scrollNavHider();
+};

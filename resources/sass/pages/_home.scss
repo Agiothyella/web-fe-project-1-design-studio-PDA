@@ -19,29 +19,24 @@
   left: 0;
   width: 100%;
   padding: 0 2rem;
-  letter-spacing: 0.4rem;
+  letter-spacing: 3px;
   font-family: "Montserrat", sans-serif;
 }
 
 .about {
+  display: none;
+  width: 100%;
   max-width: 190rem;
-  padding: 9rem 13rem;
-  background-image: url("../img/bg-about.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 5rem;
-  font-family: "Montserrat", sans-serif;
 
-  @media only screen and (max-width: $bp-largest) {
-    padding: 9rem 10rem;
-  }
+  position: relative;
+  padding: 15rem 0 8rem 0;
 
-  @media only screen and (max-width: $bp-large) {
-    padding: 9rem 8rem;
-  }
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(12, min-content);
 
-  @media only screen and (max-width: $bp-smallest) {
-    padding: 9rem 3rem 5rem 3rem;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 15rem 0 5rem 0;
   }
 }
 
@@ -52,7 +47,7 @@
   width: 100%;
   margin-top: 5rem;
   padding: 9rem 10rem 10rem 10rem;
-  border: 2px solid $color-tertiary-dark;
+  border-top: 2px solid $color-tertiary-dark;
   border-bottom: none;
   background-image: url("../img/bg-service.png");
   background-repeat: no-repeat;
@@ -74,13 +69,26 @@
   }
 }
 
-.client {
+.art {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 9rem 0 0 0;
+  background-image: url("../img/bg-art.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: $color-secondary;
+  color: $color-font-light;
+  font-family: "Montserrat", sans-serif;
+}
+
+.client {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
   padding: 6rem 10rem 8rem 10rem;
-  border: 2px solid $color-tertiary-dark;
+  border-bottom: 2px solid $color-tertiary-dark;
   border-top: none;
   background-image: url("../img/bg-client.png");
   background-repeat: no-repeat;
@@ -100,20 +108,6 @@
   @media only screen and (max-width: $bp-smallest) {
     padding: 6rem 3rem 8rem 3rem;
   }
-}
-
-.art {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 9rem 0 0 0;
-  border-bottom: 2px solid $color-secondary-light;
-  background-image: url("../img/bg-art.png");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-color: $color-secondary;
-  color: $color-font-light;
-  font-family: "Montserrat", sans-serif;
 }
 
 .contact {
@@ -154,7 +148,8 @@
   width: 100%;
   padding: 3rem 2rem 3.5rem 2rem;
   gap: 3rem;
-  border: 2px solid $color-tertiary-dark;
+  border-top: 2px solid $color-tertiary-dark;
+  border-bottom: 2px solid $color-tertiary-dark;
   background-color: $color-tertiary;
   color: $color-font-light;
   font-family: "Montserrat", sans-serif;
@@ -180,5 +175,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 }

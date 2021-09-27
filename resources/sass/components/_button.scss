@@ -32,33 +32,33 @@
   }
 }
 
-.btn-text {
-  &:link,
-  &:visited {
-    padding: 0.8rem 1.5rem;
-    border-bottom: 1px solid $color-quartenery;
-    border-radius: 0.2rem;
-    cursor: pointer;
-    background-color: transparent;
-    color: inherit;
-    line-height: normal;
-    font-size: 1.3rem;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
+// .btn-text {
+//   &:link,
+//   &:visited {
+//     padding: 0.8rem 1.5rem;
+//     border-bottom: 1px solid $color-quartenery;
+//     border-radius: 0.2rem;
+//     cursor: pointer;
+//     background-color: transparent;
+//     color: inherit;
+//     line-height: normal;
+//     font-size: 1.3rem;
+//     text-decoration: none;
+//     transition: all 0.2s;
+//   }
 
-  &:hover {
-    box-shadow: 0 0.2rem 0.3rem rgba($color-dark-1, 0.3);
-    background-color: $color-quartenery;
-    color: $color-font-light;
-    transform: translateY(-0.2rem);
-  }
+//   &:hover {
+//     box-shadow: 0 0.2rem 0.3rem rgba($color-dark-1, 0.3);
+//     background-color: $color-quartenery;
+//     color: $color-font-light;
+//     transform: translateY(-0.2rem);
+//   }
 
-  &:active {
-    box-shadow: 0 0.1rem 0.3rem rgba($color-dark-1, 0.3);
-    transform: translateY(0rem);
-  }
-}
+//   &:active {
+//     box-shadow: 0 0.1rem 0.3rem rgba($color-dark-1, 0.3);
+//     transform: translateY(0rem);
+//   }
+// }
 
 .btn-plain {
   &:link,
@@ -81,5 +81,32 @@
   &:hover,
   &:active {
     color: $color-quartenery;
+  }
+}
+
+.btn-outline {
+  &:link,
+  &:visited {
+    padding: 1.5rem 3rem;
+    border-radius: 0.2rem;
+    border: 0.5px solid $color-primary;
+    box-shadow: 0 0 15px rgba($color-quartenery, 0.2);
+    cursor: pointer;
+    background-color: transparent;
+    color: $color-primary;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: $color-quartenery;
+    box-shadow: 0 0 15px rgba($color-dark-1, 0.3);
+  }
+
+  &:active {
+    box-shadow: 0 0 25px rgba($color-quartenery, 0.3);
   }
 }
