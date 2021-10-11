@@ -346,7 +346,7 @@ const stickyNav = new Waypoint({
     headerNav.classList.toggle("u-invisible");
     navigation.classList.toggle("nav-white-bg");
   },
-  offset: 1,
+  offset: 20,
 });
 // --- Sticky nav
 

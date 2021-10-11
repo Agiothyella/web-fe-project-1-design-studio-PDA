@@ -990,9 +990,17 @@ img {
     font-size: 1.4rem;
     font-weight: 600; }
 
+.client__hire {
+  margin: 6rem 0 0 0; }
+  @media only screen and (max-width: 75em) {
+    .client__hire {
+      margin: 4rem 0 0 0; } }
+  @media only screen and (max-width: 62.5em) {
+    .client__hire {
+      margin: 3rem 0 0 0; } }
+
 .client__btn {
-  display: inline-block;
-  margin: 2rem 0 0 0; }
+  display: inline-block; }
 
 .contact__title {
   display: inline-block;
@@ -1810,8 +1818,7 @@ img {
   width: 100%;
   max-width: 190rem;
   position: relative;
-  padding: 15rem 0 8rem 0;
-  margin-top: 5rem;
+  padding: 20rem 0 8rem 0;
   display: grid;
   align-items: start;
   grid-template-columns: repeat(12, minmax(0, 1fr));

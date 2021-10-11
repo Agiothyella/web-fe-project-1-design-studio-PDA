@@ -220,8 +220,19 @@
     }
   }
 
+  &__hire {
+    margin: 6rem 0 0 0;
+
+    @media only screen and (max-width: $bp-largest) {
+      margin: 4rem 0 0 0;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      margin: 3rem 0 0 0;
+    }
+  }
+
   &__btn {
     display: inline-block;
-    margin: 2rem 0 0 0;
   }
 }
