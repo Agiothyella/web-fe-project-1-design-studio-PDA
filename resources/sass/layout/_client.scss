@@ -174,7 +174,7 @@
   &__quote {
     font-family: "Barlow", sans-serif;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-style: italic;
     text-shadow: 0 0 1rem $color-tertiary, 0 0 0.1rem $color-secondary-light;
 
@@ -208,31 +208,15 @@
   &__name {
     display: inline-block;
     margin: 3rem 0 0 0;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 500;
     font-style: normal;
 
     span {
       display: block;
       margin-top: 0.3rem;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 600;
     }
-  }
-
-  &__hire {
-    margin: 6rem 0 0 0;
-
-    @media only screen and (max-width: $bp-largest) {
-      margin: 4rem 0 0 0;
-    }
-
-    @media only screen and (max-width: $bp-large) {
-      margin: 3rem 0 0 0;
-    }
-  }
-
-  &__btn {
-    display: inline-block;
   }
 }

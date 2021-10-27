@@ -1362,7 +1362,7 @@ img {
 .client__quote {
   font-family: "Barlow", sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: italic;
   text-shadow: 0 0 1rem #5c636e, 0 0 0.1rem #484f59;
 }
@@ -1398,7 +1398,7 @@ img {
 .client__name {
   display: inline-block;
   margin: 3rem 0 0 0;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 500;
   font-style: normal;
 }
@@ -1406,28 +1406,8 @@ img {
 .client__name span {
   display: block;
   margin-top: 0.3rem;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
-}
-
-.client__hire {
-  margin: 6rem 0 0 0;
-}
-
-@media only screen and (max-width: 75em) {
-  .client__hire {
-    margin: 4rem 0 0 0;
-  }
-}
-
-@media only screen and (max-width: 62.5em) {
-  .client__hire {
-    margin: 3rem 0 0 0;
-  }
-}
-
-.client__btn {
-  display: inline-block;
 }
 
 .contact__title {
