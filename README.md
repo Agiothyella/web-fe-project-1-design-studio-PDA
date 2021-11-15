@@ -28,6 +28,10 @@ If you're creator of one of the images I use as placeholder on this webpage and 
 
 # Journal:
 
+DESIGN:
 There's one type of style that's popular for concept art design studios website that I had observed. And that is blasting the page with a lot of images they created as a proof of their work to impress the visitors. One problem I feel with that kind of style is: It's hard to manage the composition and harder to set the focal points on the page. Too many images confuses the visitors because even though it's shows what the studio capable of, It make it harder for the visitors to navigate the page. Images take the most attention, and too much of it shadows the functionality of the webpage.
 
 I tried to make this webpage cleaner with some isolated space specialized for images so visitors can clearly navigate the page easily while presented samples of studio works. I also make some of the sections with grayish-blue color with subtle background image to give the impression of adventure and creativity, perfect for what concept art studios trying to communicate.
+
+DEVELOPMENT:
+The technical aspect of this page though, is a nightmare. The javascript is so dirty because the script is run as it is, without common functions running different tasks. The script is like different things mashed together to make one big messy code. It's a mistake, but I learn from it.
