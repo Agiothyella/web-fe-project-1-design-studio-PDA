@@ -28,12 +28,12 @@ If you're creator of one of the images I use as placeholder on this webpage and 
 
 # Journal:
 
-### DESIGN:
+### Design:
 There's one type of style that's popular for concept art design studios website that I had observed. And that is blasting the page with a lot of images they created as a proof of their work to impress the visitors. One problem I feel with that kind of style is: It's hard to manage the composition and harder to set the focal points on the page. Too many images confuses the visitors because even though it's shows what the studio capable of, It make it harder for the visitors to navigate the page. Images take the most attention, and too much of it shadows the functionality of the webpage.
 
 I tried to make this webpage cleaner with some isolated space specialized for images so visitors can clearly navigate the page easily while presented samples of studio works. I also make some of the sections with grayish-blue color with subtle background image to give the impression of adventure and creativity, perfect for what concept art studios trying to communicate.
 
-### DEVELOPMENT:
+### Development:
 The technical aspect of this page though, is a nightmare. The javascript is so dirty because the script is run as it is, without common functions running different tasks. The script is like different things mashed together to make one big messy code. It's a mistake, but I learn from it. 
 
 Another thing worth reconsidering is the resources loading. It's a design studio webpage with lot of images, some of them may bigger in size. Maybe it's better to wait for the page to load completely before showing it to the user, and then using some sort of loading screen before it. Better, is to use lazy load to just load it faster before loading the big one. I should've done that, but I didn't know how to properly do that when I build this page.
