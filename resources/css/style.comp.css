@@ -261,6 +261,21 @@ img {
   box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
   transform: translateY(0rem); }
 
+.btn-text:link, .btn-text:visited {
+  padding: 0.8rem 1.5rem;
+  border-bottom: 1px solid #f8b500;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+  line-height: normal;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: all 0.2s; }
+
+.btn-text:hover, .btn-text:active {
+  color: #f8b500; }
+
 .btn-plain:link, .btn-plain:visited {
   padding: 0.3rem 0.5rem;
   border-bottom: 1px solid #f8b500;
